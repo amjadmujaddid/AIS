@@ -8,3 +8,13 @@ c:\users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISEF\bin\Deb
 c:\users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISEF\obj\Debug\AISEF.csprojResolveAssemblyReference.cache
 c:\users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISEF\obj\Debug\AISEF.dll
 c:\users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISEF\obj\Debug\AISEF.pdb
+E:\HyBrings\AIS Source Code\AISEF\bin\Debug\AISEF.dll.config
+E:\HyBrings\AIS Source Code\AISEF\bin\Debug\AISEF.dll
+E:\HyBrings\AIS Source Code\AISEF\bin\Debug\AISEF.pdb
+E:\HyBrings\AIS Source Code\AISEF\bin\Debug\EntityFramework.dll
+E:\HyBrings\AIS Source Code\AISEF\bin\Debug\EntityFramework.SqlServer.dll
+E:\HyBrings\AIS Source Code\AISEF\bin\Debug\EntityFramework.xml
+E:\HyBrings\AIS Source Code\AISEF\bin\Debug\EntityFramework.SqlServer.xml
+E:\HyBrings\AIS Source Code\AISEF\obj\Debug\AISEF.csprojResolveAssemblyReference.cache
+E:\HyBrings\AIS Source Code\AISEF\obj\Debug\AISEF.dll
+E:\HyBrings\AIS Source Code\AISEF\obj\Debug\AISEF.pdb

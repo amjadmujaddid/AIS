@@ -9,3 +9,14 @@ c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISService\bi
 c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISService\obj\Debug\AISService.csprojResolveAssemblyReference.cache
 c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISService\obj\Debug\AISService.dll
 c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISService\obj\Debug\AISService.pdb
+E:\HyBrings\AIS Source Code\AISService\bin\Debug\AISService.dll
+E:\HyBrings\AIS Source Code\AISService\bin\Debug\AISService.pdb
+E:\HyBrings\AIS Source Code\AISService\bin\Debug\AISEF.dll
+E:\HyBrings\AIS Source Code\AISService\bin\Debug\EntityFramework.dll
+E:\HyBrings\AIS Source Code\AISService\bin\Debug\EntityFramework.SqlServer.dll
+E:\HyBrings\AIS Source Code\AISService\bin\Debug\AISEF.pdb
+E:\HyBrings\AIS Source Code\AISService\bin\Debug\EntityFramework.xml
+E:\HyBrings\AIS Source Code\AISService\bin\Debug\EntityFramework.SqlServer.xml
+E:\HyBrings\AIS Source Code\AISService\obj\Debug\AISService.csprojResolveAssemblyReference.cache
+E:\HyBrings\AIS Source Code\AISService\obj\Debug\AISService.dll
+E:\HyBrings\AIS Source Code\AISService\obj\Debug\AISService.pdb
