@@ -1,0 +1,11 @@
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISService\bin\Debug\AISService.dll
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISService\bin\Debug\AISService.pdb
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISService\bin\Debug\AISEF.dll
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISService\bin\Debug\EntityFramework.dll
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISService\bin\Debug\EntityFramework.SqlServer.dll
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISService\bin\Debug\AISEF.pdb
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISService\bin\Debug\EntityFramework.xml
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISService\bin\Debug\EntityFramework.SqlServer.xml
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISService\obj\Debug\AISService.csprojResolveAssemblyReference.cache
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISService\obj\Debug\AISService.dll
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\AISService\obj\Debug\AISService.pdb

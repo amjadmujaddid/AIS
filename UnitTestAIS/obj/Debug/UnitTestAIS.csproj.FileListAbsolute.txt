@@ -1,0 +1,16 @@
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\UnitTestAIS\bin\Debug\UnitTestAIS.dll.config
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\UnitTestAIS\bin\Debug\UnitTestAIS.dll
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\UnitTestAIS\bin\Debug\UnitTestAIS.pdb
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\UnitTestAIS\bin\Debug\AISEF.dll
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\UnitTestAIS\bin\Debug\AISService.dll
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\UnitTestAIS\bin\Debug\EntityFramework.dll
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\UnitTestAIS\bin\Debug\EntityFramework.SqlServer.dll
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\UnitTestAIS\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\UnitTestAIS\bin\Debug\AISEF.pdb
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\UnitTestAIS\bin\Debug\AISService.pdb
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\UnitTestAIS\bin\Debug\EntityFramework.xml
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\UnitTestAIS\bin\Debug\EntityFramework.SqlServer.xml
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\UnitTestAIS\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\UnitTestAIS\obj\Debug\UnitTestAIS.csprojResolveAssemblyReference.cache
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\UnitTestAIS\obj\Debug\UnitTestAIS.dll
+c:\Users\amjadmujaddid\documents\visual studio 2015\Projects\AISEF\UnitTestAIS\obj\Debug\UnitTestAIS.pdb

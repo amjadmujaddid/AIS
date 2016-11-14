@@ -1,0 +1,750 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbAISModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dbAIS.dbo.ComGenVariable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ComGenVariable">
+          <Key>
+            <PropertyRef Name="Variable" />
+            <PropertyRef Name="ValueName" />
+          </Key>
+          <Property Name="Variable" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ValueName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Keterangan" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dbAIS.dbo.gmComSetting' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="gmComSetting">
+          <Key>
+            <PropertyRef Name="CompanyID" />
+            <PropertyRef Name="CompanyName" />
+            <PropertyRef Name="CompanyAddress" />
+          </Key>
+          <Property Name="CompanyID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="CompanyAddress" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ApplicationVersion" Type="varchar" MaxLength="10" />
+          <Property Name="TokenServiceID" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="tmAlbum">
+          <Key>
+            <PropertyRef Name="No_Album" />
+          </Key>
+          <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="No_Album" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Lemari" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Rak" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Blok" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tmBukuTanah">
+          <Key>
+            <PropertyRef Name="NB_Barcode" />
+          </Key>
+          <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="NB_Barcode" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="IDHak" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="NomorHak" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="No_Album" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="IDDesa" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="IDKecamatan" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="Luas" Type="int" Nullable="false" />
+          <Property Name="PemegangHak" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Status" Type="char" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tmControlAccess">
+          <Key>
+            <PropertyRef Name="ControlAccessID" />
+          </Key>
+          <Property Name="ControlAccessID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="ControlAccessName" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tmDesa">
+          <Key>
+            <PropertyRef Name="IDDesa" />
+          </Key>
+          <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="IDDesa" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="NamaDesa" Type="varchar" MaxLength="125" Nullable="false" />
+          <Property Name="IDKecamatan" Type="varchar" MaxLength="5" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tmGender">
+          <Key>
+            <PropertyRef Name="IDJekel" />
+          </Key>
+          <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="IDJekel" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="NamaJekel" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tmGroupAccess">
+          <Key>
+            <PropertyRef Name="GroupAccessID" />
+          </Key>
+          <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="GroupAccessID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="GroupAccessName" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tmJabatan">
+          <Key>
+            <PropertyRef Name="IDJabatan" />
+          </Key>
+          <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="IDJabatan" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="NamaJabatan" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tmJenisHak">
+          <Key>
+            <PropertyRef Name="IDHak" />
+          </Key>
+          <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="IDHak" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="NamaHak" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tmKecamatan">
+          <Key>
+            <PropertyRef Name="IDKecamatan" />
+          </Key>
+          <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="IDKecamatan" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="NamaKecamatan" Type="varchar" MaxLength="125" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tmStaff">
+          <Key>
+            <PropertyRef Name="NIP" />
+          </Key>
+          <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="NIP" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="NamaLengkap" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDJabatan" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="IDJekel" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Alamat" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tmUser">
+          <Key>
+            <PropertyRef Name="User_name" />
+          </Key>
+          <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="User_name" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="NamaLengkap" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="OldPassword" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="LastPassword" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="GroupAccessID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="ControlAccessID" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbAIS.dbo.tmWallboard' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tmWallboard">
+          <Property Name="Berita" Type="varchar(max)" />
+        </EntityType>-->
+        <EntityType Name="tmWarkah">
+          <Key>
+            <PropertyRef Name="NW_Barcode" />
+          </Key>
+          <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="NW_Barcode" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Jenis" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="NomorWarkah" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Tahun" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="No_Album" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Status" Type="char" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dbAIS.dbo.trDetailKembaliBT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="trDetailKembaliBT">
+          <Key>
+            <PropertyRef Name="Nomorkbl" />
+            <PropertyRef Name="NB_Barcode" />
+            <PropertyRef Name="JumlahBK" />
+          </Key>
+          <Property Name="Nomorkbl" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="NB_Barcode" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="JumlahBK" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dbAIS.dbo.trDetailKembaliWarkah' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="trDetailKembaliWarkah">
+          <Key>
+            <PropertyRef Name="Nomorkbl" />
+            <PropertyRef Name="NW_Barcode" />
+            <PropertyRef Name="JumlahBK" />
+          </Key>
+          <Property Name="Nomorkbl" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="NW_Barcode" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="JumlahBK" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dbAIS.dbo.trDetailPinjamBT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="trDetailPinjamBT">
+          <Key>
+            <PropertyRef Name="Nomorpjm" />
+            <PropertyRef Name="NB_Barcode" />
+            <PropertyRef Name="JumlahBK" />
+          </Key>
+          <Property Name="Nomorpjm" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="NB_Barcode" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="JumlahBK" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dbAIS.dbo.trDetailPinjamWarkah' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="trDetailPinjamWarkah">
+          <Key>
+            <PropertyRef Name="Nomorpjm" />
+            <PropertyRef Name="NW_Barcode" />
+            <PropertyRef Name="JumlahBK" />
+          </Key>
+          <Property Name="Nomorpjm" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="NW_Barcode" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="JumlahBK" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="trKembali">
+          <Key>
+            <PropertyRef Name="NomorKbl" />
+          </Key>
+          <Property Name="NomorKbl" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TanggalKbl" Type="datetime" Nullable="false" />
+          <Property Name="TotalKbl" Type="int" Nullable="false" />
+          <Property Name="NIP" Type="varchar" MaxLength="18" Nullable="false" />
+          <Property Name="User_name" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Note" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="trPinjam">
+          <Key>
+            <PropertyRef Name="Nomorpjm" />
+          </Key>
+          <Property Name="Nomorpjm" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Tanggalpjm" Type="datetime" Nullable="false" />
+          <Property Name="Totalpjm" Type="int" Nullable="false" />
+          <Property Name="NIP" Type="varchar" MaxLength="18" Nullable="false" />
+          <Property Name="User_name" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Note" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="dbAISModelStoreContainer">
+          <EntitySet Name="tmAlbum" EntityType="Self.tmAlbum" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tmBukuTanah" EntityType="Self.tmBukuTanah" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tmControlAccess" EntityType="Self.tmControlAccess" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tmDesa" EntityType="Self.tmDesa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tmGender" EntityType="Self.tmGender" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tmGroupAccess" EntityType="Self.tmGroupAccess" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tmJabatan" EntityType="Self.tmJabatan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tmJenisHak" EntityType="Self.tmJenisHak" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tmKecamatan" EntityType="Self.tmKecamatan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tmStaff" EntityType="Self.tmStaff" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tmUser" EntityType="Self.tmUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tmWarkah" EntityType="Self.tmWarkah" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="trKembali" EntityType="Self.trKembali" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="trPinjam" EntityType="Self.trPinjam" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ComGenVariable" EntityType="Self.ComGenVariable" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ComGenVariable].[Variable] AS [Variable], 
+    [ComGenVariable].[ValueName] AS [ValueName], 
+    [ComGenVariable].[Keterangan] AS [Keterangan]
+    FROM [dbo].[ComGenVariable] AS [ComGenVariable]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="gmComSetting" EntityType="Self.gmComSetting" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [gmComSetting].[CompanyID] AS [CompanyID], 
+    [gmComSetting].[CompanyName] AS [CompanyName], 
+    [gmComSetting].[CompanyAddress] AS [CompanyAddress], 
+    [gmComSetting].[ApplicationVersion] AS [ApplicationVersion], 
+    [gmComSetting].[TokenServiceID] AS [TokenServiceID]
+    FROM [dbo].[gmComSetting] AS [gmComSetting]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="trDetailKembaliBT" EntityType="Self.trDetailKembaliBT" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [trDetailKembaliBT].[Nomorkbl] AS [Nomorkbl], 
+    [trDetailKembaliBT].[NB_Barcode] AS [NB_Barcode], 
+    [trDetailKembaliBT].[JumlahBK] AS [JumlahBK]
+    FROM [dbo].[trDetailKembaliBT] AS [trDetailKembaliBT]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="trDetailKembaliWarkah" EntityType="Self.trDetailKembaliWarkah" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [trDetailKembaliWarkah].[Nomorkbl] AS [Nomorkbl], 
+    [trDetailKembaliWarkah].[NW_Barcode] AS [NW_Barcode], 
+    [trDetailKembaliWarkah].[JumlahBK] AS [JumlahBK]
+    FROM [dbo].[trDetailKembaliWarkah] AS [trDetailKembaliWarkah]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="trDetailPinjamBT" EntityType="Self.trDetailPinjamBT" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [trDetailPinjamBT].[Nomorpjm] AS [Nomorpjm], 
+    [trDetailPinjamBT].[NB_Barcode] AS [NB_Barcode], 
+    [trDetailPinjamBT].[JumlahBK] AS [JumlahBK]
+    FROM [dbo].[trDetailPinjamBT] AS [trDetailPinjamBT]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="trDetailPinjamWarkah" EntityType="Self.trDetailPinjamWarkah" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [trDetailPinjamWarkah].[Nomorpjm] AS [Nomorpjm], 
+    [trDetailPinjamWarkah].[NW_Barcode] AS [NW_Barcode], 
+    [trDetailPinjamWarkah].[JumlahBK] AS [JumlahBK]
+    FROM [dbo].[trDetailPinjamWarkah] AS [trDetailPinjamWarkah]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbAISModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Album">
+          <Key>
+            <PropertyRef Name="No_Album" />
+          </Key>
+          <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="No_Album" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Lemari" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Rak" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Blok" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BukuTanah">
+          <Key>
+            <PropertyRef Name="NB_Barcode" />
+          </Key>
+          <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NB_Barcode" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDHak" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NomorHak" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="No_Album" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDDesa" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDKecamatan" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Luas" Type="Int32" Nullable="false" />
+          <Property Name="PemegangHak" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ControlAccess">
+          <Key>
+            <PropertyRef Name="ControlAccessID" />
+          </Key>
+          <Property Name="ControlAccessID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ControlAccessName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Desa">
+          <Key>
+            <PropertyRef Name="IDDesa" />
+          </Key>
+          <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="IDDesa" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NamaDesa" Type="String" MaxLength="125" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDKecamatan" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Gender">
+          <Key>
+            <PropertyRef Name="IDJekel" />
+          </Key>
+          <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="IDJekel" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NamaJekel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GroupAccess">
+          <Key>
+            <PropertyRef Name="GroupAccessID" />
+          </Key>
+          <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="GroupAccessID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GroupAccessName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Jabatan">
+          <Key>
+            <PropertyRef Name="IDJabatan" />
+          </Key>
+          <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="IDJabatan" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NamaJabatan" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="JenisHak">
+          <Key>
+            <PropertyRef Name="IDHak" />
+          </Key>
+          <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="IDHak" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NamaHak" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Kecamatan">
+          <Key>
+            <PropertyRef Name="IDKecamatan" />
+          </Key>
+          <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="IDKecamatan" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NamaKecamatan" Type="String" MaxLength="125" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="NIP" />
+          </Key>
+          <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NIP" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NamaLengkap" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDJabatan" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDJekel" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Alamat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="User_name" />
+          </Key>
+          <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="User_name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NamaLengkap" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OldPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GroupAccessID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ControlAccessID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Warkah">
+          <Key>
+            <PropertyRef Name="NW_Barcode" />
+          </Key>
+          <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NW_Barcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Jenis" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NomorWarkah" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tahun" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="No_Album" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Kembali">
+          <Key>
+            <PropertyRef Name="NomorKbl" />
+          </Key>
+          <Property Name="NomorKbl" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TanggalKbl" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TotalKbl" Type="Int32" Nullable="false" />
+          <Property Name="NIP" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="User_name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Pinjam">
+          <Key>
+            <PropertyRef Name="Nomorpjm" />
+          </Key>
+          <Property Name="Nomorpjm" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tanggalpjm" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Totalpjm" Type="Int32" Nullable="false" />
+          <Property Name="NIP" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="User_name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="GenVariable">
+          <Key>
+            <PropertyRef Name="Variable" />
+            <PropertyRef Name="ValueName" />
+          </Key>
+          <Property Name="Variable" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ValueName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Keterangan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ComSetting">
+          <Key>
+            <PropertyRef Name="CompanyID" />
+            <PropertyRef Name="CompanyName" />
+            <PropertyRef Name="CompanyAddress" />
+          </Key>
+          <Property Name="CompanyID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CompanyName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CompanyAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ApplicationVersion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TokenServiceID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="DetailKembaliBT">
+          <Key>
+            <PropertyRef Name="Nomorkbl" />
+            <PropertyRef Name="NB_Barcode" />
+            <PropertyRef Name="JumlahBK" />
+          </Key>
+          <Property Name="Nomorkbl" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NB_Barcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="JumlahBK" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DetailKembaliWarkah">
+          <Key>
+            <PropertyRef Name="Nomorkbl" />
+            <PropertyRef Name="NW_Barcode" />
+            <PropertyRef Name="JumlahBK" />
+          </Key>
+          <Property Name="Nomorkbl" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NW_Barcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="JumlahBK" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DetailPinjamBT">
+          <Key>
+            <PropertyRef Name="Nomorpjm" />
+            <PropertyRef Name="NB_Barcode" />
+            <PropertyRef Name="JumlahBK" />
+          </Key>
+          <Property Name="Nomorpjm" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NB_Barcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="JumlahBK" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DetailPinjamWarkah">
+          <Key>
+            <PropertyRef Name="Nomorpjm" />
+            <PropertyRef Name="NW_Barcode" />
+            <PropertyRef Name="JumlahBK" />
+          </Key>
+          <Property Name="Nomorpjm" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NW_Barcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="JumlahBK" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="dbAISEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Albums" EntityType="dbAISModel.Album" />
+          <EntitySet Name="BukuTanahs" EntityType="dbAISModel.BukuTanah" />
+          <EntitySet Name="ControlAccesses" EntityType="dbAISModel.ControlAccess" />
+          <EntitySet Name="Desas" EntityType="dbAISModel.Desa" />
+          <EntitySet Name="Genders" EntityType="dbAISModel.Gender" />
+          <EntitySet Name="GroupAccesses" EntityType="dbAISModel.GroupAccess" />
+          <EntitySet Name="Jabatans" EntityType="dbAISModel.Jabatan" />
+          <EntitySet Name="JenisHaks" EntityType="dbAISModel.JenisHak" />
+          <EntitySet Name="Kecamatans" EntityType="dbAISModel.Kecamatan" />
+          <EntitySet Name="Staffs" EntityType="dbAISModel.Staff" />
+          <EntitySet Name="Users" EntityType="dbAISModel.User" />
+          <EntitySet Name="Warkahs" EntityType="dbAISModel.Warkah" />
+          <EntitySet Name="Kembalis" EntityType="dbAISModel.Kembali" />
+          <EntitySet Name="Pinjams" EntityType="dbAISModel.Pinjam" />
+          <EntitySet Name="GenVariables" EntityType="dbAISModel.GenVariable" />
+          <EntitySet Name="ComSettings" EntityType="dbAISModel.ComSetting" />
+          <EntitySet Name="DetailKembaliBTs" EntityType="dbAISModel.DetailKembaliBT" />
+          <EntitySet Name="DetailKembaliWarkahs" EntityType="dbAISModel.DetailKembaliWarkah" />
+          <EntitySet Name="DetailPinjamBTs" EntityType="dbAISModel.DetailPinjamBT" />
+          <EntitySet Name="DetailPinjamWarkahs" EntityType="dbAISModel.DetailPinjamWarkah" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbAISModelStoreContainer" CdmEntityContainer="dbAISEntities">
+          <EntitySetMapping Name="Albums">
+            <EntityTypeMapping TypeName="dbAISModel.Album">
+              <MappingFragment StoreEntitySet="tmAlbum">
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="No_Album" ColumnName="No_Album" />
+                <ScalarProperty Name="Lemari" ColumnName="Lemari" />
+                <ScalarProperty Name="Rak" ColumnName="Rak" />
+                <ScalarProperty Name="Blok" ColumnName="Blok" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BukuTanahs">
+            <EntityTypeMapping TypeName="dbAISModel.BukuTanah">
+              <MappingFragment StoreEntitySet="tmBukuTanah">
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="NB_Barcode" ColumnName="NB_Barcode" />
+                <ScalarProperty Name="IDHak" ColumnName="IDHak" />
+                <ScalarProperty Name="NomorHak" ColumnName="NomorHak" />
+                <ScalarProperty Name="No_Album" ColumnName="No_Album" />
+                <ScalarProperty Name="IDDesa" ColumnName="IDDesa" />
+                <ScalarProperty Name="IDKecamatan" ColumnName="IDKecamatan" />
+                <ScalarProperty Name="Luas" ColumnName="Luas" />
+                <ScalarProperty Name="PemegangHak" ColumnName="PemegangHak" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ControlAccesses">
+            <EntityTypeMapping TypeName="dbAISModel.ControlAccess">
+              <MappingFragment StoreEntitySet="tmControlAccess">
+                <ScalarProperty Name="ControlAccessID" ColumnName="ControlAccessID" />
+                <ScalarProperty Name="ControlAccessName" ColumnName="ControlAccessName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Desas">
+            <EntityTypeMapping TypeName="dbAISModel.Desa">
+              <MappingFragment StoreEntitySet="tmDesa">
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="IDDesa" ColumnName="IDDesa" />
+                <ScalarProperty Name="NamaDesa" ColumnName="NamaDesa" />
+                <ScalarProperty Name="IDKecamatan" ColumnName="IDKecamatan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Genders">
+            <EntityTypeMapping TypeName="dbAISModel.Gender">
+              <MappingFragment StoreEntitySet="tmGender">
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="IDJekel" ColumnName="IDJekel" />
+                <ScalarProperty Name="NamaJekel" ColumnName="NamaJekel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GroupAccesses">
+            <EntityTypeMapping TypeName="dbAISModel.GroupAccess">
+              <MappingFragment StoreEntitySet="tmGroupAccess">
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="GroupAccessID" ColumnName="GroupAccessID" />
+                <ScalarProperty Name="GroupAccessName" ColumnName="GroupAccessName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jabatans">
+            <EntityTypeMapping TypeName="dbAISModel.Jabatan">
+              <MappingFragment StoreEntitySet="tmJabatan">
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="IDJabatan" ColumnName="IDJabatan" />
+                <ScalarProperty Name="NamaJabatan" ColumnName="NamaJabatan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JenisHaks">
+            <EntityTypeMapping TypeName="dbAISModel.JenisHak">
+              <MappingFragment StoreEntitySet="tmJenisHak">
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="IDHak" ColumnName="IDHak" />
+                <ScalarProperty Name="NamaHak" ColumnName="NamaHak" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kecamatans">
+            <EntityTypeMapping TypeName="dbAISModel.Kecamatan">
+              <MappingFragment StoreEntitySet="tmKecamatan">
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="IDKecamatan" ColumnName="IDKecamatan" />
+                <ScalarProperty Name="NamaKecamatan" ColumnName="NamaKecamatan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Staffs">
+            <EntityTypeMapping TypeName="dbAISModel.Staff">
+              <MappingFragment StoreEntitySet="tmStaff">
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="NIP" ColumnName="NIP" />
+                <ScalarProperty Name="NamaLengkap" ColumnName="NamaLengkap" />
+                <ScalarProperty Name="IDJabatan" ColumnName="IDJabatan" />
+                <ScalarProperty Name="IDJekel" ColumnName="IDJekel" />
+                <ScalarProperty Name="Alamat" ColumnName="Alamat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="dbAISModel.User">
+              <MappingFragment StoreEntitySet="tmUser">
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="User_name" ColumnName="User_name" />
+                <ScalarProperty Name="NamaLengkap" ColumnName="NamaLengkap" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="OldPassword" ColumnName="OldPassword" />
+                <ScalarProperty Name="LastPassword" ColumnName="LastPassword" />
+                <ScalarProperty Name="GroupAccessID" ColumnName="GroupAccessID" />
+                <ScalarProperty Name="ControlAccessID" ColumnName="ControlAccessID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Warkahs">
+            <EntityTypeMapping TypeName="dbAISModel.Warkah">
+              <MappingFragment StoreEntitySet="tmWarkah">
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+                <ScalarProperty Name="NW_Barcode" ColumnName="NW_Barcode" />
+                <ScalarProperty Name="Jenis" ColumnName="Jenis" />
+                <ScalarProperty Name="NomorWarkah" ColumnName="NomorWarkah" />
+                <ScalarProperty Name="Tahun" ColumnName="Tahun" />
+                <ScalarProperty Name="No_Album" ColumnName="No_Album" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kembalis">
+            <EntityTypeMapping TypeName="dbAISModel.Kembali">
+              <MappingFragment StoreEntitySet="trKembali">
+                <ScalarProperty Name="NomorKbl" ColumnName="NomorKbl" />
+                <ScalarProperty Name="TanggalKbl" ColumnName="TanggalKbl" />
+                <ScalarProperty Name="TotalKbl" ColumnName="TotalKbl" />
+                <ScalarProperty Name="NIP" ColumnName="NIP" />
+                <ScalarProperty Name="User_name" ColumnName="User_name" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pinjams">
+            <EntityTypeMapping TypeName="dbAISModel.Pinjam">
+              <MappingFragment StoreEntitySet="trPinjam">
+                <ScalarProperty Name="Nomorpjm" ColumnName="Nomorpjm" />
+                <ScalarProperty Name="Tanggalpjm" ColumnName="Tanggalpjm" />
+                <ScalarProperty Name="Totalpjm" ColumnName="Totalpjm" />
+                <ScalarProperty Name="NIP" ColumnName="NIP" />
+                <ScalarProperty Name="User_name" ColumnName="User_name" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GenVariables">
+            <EntityTypeMapping TypeName="dbAISModel.GenVariable">
+              <MappingFragment StoreEntitySet="ComGenVariable">
+                <ScalarProperty Name="Variable" ColumnName="Variable" />
+                <ScalarProperty Name="ValueName" ColumnName="ValueName" />
+                <ScalarProperty Name="Keterangan" ColumnName="Keterangan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ComSettings">
+            <EntityTypeMapping TypeName="dbAISModel.ComSetting">
+              <MappingFragment StoreEntitySet="gmComSetting">
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+                <ScalarProperty Name="ApplicationVersion" ColumnName="ApplicationVersion" />
+                <ScalarProperty Name="TokenServiceID" ColumnName="TokenServiceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetailKembaliBTs">
+            <EntityTypeMapping TypeName="dbAISModel.DetailKembaliBT">
+              <MappingFragment StoreEntitySet="trDetailKembaliBT">
+                <ScalarProperty Name="Nomorkbl" ColumnName="Nomorkbl" />
+                <ScalarProperty Name="NB_Barcode" ColumnName="NB_Barcode" />
+                <ScalarProperty Name="JumlahBK" ColumnName="JumlahBK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetailKembaliWarkahs">
+            <EntityTypeMapping TypeName="dbAISModel.DetailKembaliWarkah">
+              <MappingFragment StoreEntitySet="trDetailKembaliWarkah">
+                <ScalarProperty Name="Nomorkbl" ColumnName="Nomorkbl" />
+                <ScalarProperty Name="NW_Barcode" ColumnName="NW_Barcode" />
+                <ScalarProperty Name="JumlahBK" ColumnName="JumlahBK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetailPinjamBTs">
+            <EntityTypeMapping TypeName="dbAISModel.DetailPinjamBT">
+              <MappingFragment StoreEntitySet="trDetailPinjamBT">
+                <ScalarProperty Name="Nomorpjm" ColumnName="Nomorpjm" />
+                <ScalarProperty Name="NB_Barcode" ColumnName="NB_Barcode" />
+                <ScalarProperty Name="JumlahBK" ColumnName="JumlahBK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetailPinjamWarkahs">
+            <EntityTypeMapping TypeName="dbAISModel.DetailPinjamWarkah">
+              <MappingFragment StoreEntitySet="trDetailPinjamWarkah">
+                <ScalarProperty Name="Nomorpjm" ColumnName="Nomorpjm" />
+                <ScalarProperty Name="NW_Barcode" ColumnName="NW_Barcode" />
+                <ScalarProperty Name="JumlahBK" ColumnName="JumlahBK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

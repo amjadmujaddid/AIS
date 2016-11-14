@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbAISModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbAIS.dbo.ComGenVariable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ComGenVariable">
+    <Key>
+      <PropertyRef Name="Variable" />
+      <PropertyRef Name="ValueName" />
+    </Key>
+    <Property Name="Variable" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ValueName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Keterangan" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbAIS.dbo.gmComSetting' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="gmComSetting">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="CompanyName" />
+      <PropertyRef Name="CompanyAddress" />
+    </Key>
+    <Property Name="CompanyID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="CompanyAddress" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="ApplicationVersion" Type="varchar" MaxLength="10" />
+    <Property Name="TokenServiceID" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="tmAlbum">
+    <Key>
+      <PropertyRef Name="No_Album" />
+    </Key>
+    <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="No_Album" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Lemari" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Rak" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Blok" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tmBukuTanah">
+    <Key>
+      <PropertyRef Name="NB_Barcode" />
+    </Key>
+    <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="NB_Barcode" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="IDHak" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="NomorHak" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="No_Album" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="IDDesa" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="IDKecamatan" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Luas" Type="int" Nullable="false" />
+    <Property Name="PemegangHak" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tmControlAccess">
+    <Key>
+      <PropertyRef Name="ControlAccessID" />
+    </Key>
+    <Property Name="ControlAccessID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlAccessName" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tmDesa">
+    <Key>
+      <PropertyRef Name="IDDesa" />
+    </Key>
+    <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="IDDesa" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="NamaDesa" Type="varchar" MaxLength="125" Nullable="false" />
+    <Property Name="IDKecamatan" Type="varchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tmGender">
+    <Key>
+      <PropertyRef Name="IDJekel" />
+    </Key>
+    <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="IDJekel" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="NamaJekel" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tmGroupAccess">
+    <Key>
+      <PropertyRef Name="GroupAccessID" />
+    </Key>
+    <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="GroupAccessID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GroupAccessName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tmJabatan">
+    <Key>
+      <PropertyRef Name="IDJabatan" />
+    </Key>
+    <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="IDJabatan" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NamaJabatan" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tmJenisHak">
+    <Key>
+      <PropertyRef Name="IDHak" />
+    </Key>
+    <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="IDHak" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="NamaHak" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tmKecamatan">
+    <Key>
+      <PropertyRef Name="IDKecamatan" />
+    </Key>
+    <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="IDKecamatan" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="NamaKecamatan" Type="varchar" MaxLength="125" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tmStaff">
+    <Key>
+      <PropertyRef Name="NIP" />
+    </Key>
+    <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="NIP" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="NamaLengkap" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IDJabatan" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="IDJekel" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Alamat" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tmUser">
+    <Key>
+      <PropertyRef Name="User_name" />
+    </Key>
+    <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="User_name" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="NamaLengkap" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OldPassword" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="LastPassword" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="GroupAccessID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlAccessID" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'dbAIS.dbo.tmWallboard' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tmWallboard">
+          <Property Name="Berita" Type="varchar(max)" />
+        </EntityType>-->
+  <EntityType Name="tmWarkah">
+    <Key>
+      <PropertyRef Name="NW_Barcode" />
+    </Key>
+    <Property Name="RecordStatus" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="NW_Barcode" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Jenis" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="NomorWarkah" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tahun" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="No_Album" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Status" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbAIS.dbo.trDetailKembaliBT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="trDetailKembaliBT">
+    <Key>
+      <PropertyRef Name="Nomorkbl" />
+      <PropertyRef Name="NB_Barcode" />
+      <PropertyRef Name="JumlahBK" />
+    </Key>
+    <Property Name="Nomorkbl" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="NB_Barcode" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="JumlahBK" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbAIS.dbo.trDetailKembaliWarkah' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="trDetailKembaliWarkah">
+    <Key>
+      <PropertyRef Name="Nomorkbl" />
+      <PropertyRef Name="NW_Barcode" />
+      <PropertyRef Name="JumlahBK" />
+    </Key>
+    <Property Name="Nomorkbl" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="NW_Barcode" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="JumlahBK" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbAIS.dbo.trDetailPinjamBT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="trDetailPinjamBT">
+    <Key>
+      <PropertyRef Name="Nomorpjm" />
+      <PropertyRef Name="NB_Barcode" />
+      <PropertyRef Name="JumlahBK" />
+    </Key>
+    <Property Name="Nomorpjm" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="NB_Barcode" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="JumlahBK" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbAIS.dbo.trDetailPinjamWarkah' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="trDetailPinjamWarkah">
+    <Key>
+      <PropertyRef Name="Nomorpjm" />
+      <PropertyRef Name="NW_Barcode" />
+      <PropertyRef Name="JumlahBK" />
+    </Key>
+    <Property Name="Nomorpjm" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="NW_Barcode" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="JumlahBK" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trKembali">
+    <Key>
+      <PropertyRef Name="NomorKbl" />
+    </Key>
+    <Property Name="NomorKbl" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TanggalKbl" Type="datetime" Nullable="false" />
+    <Property Name="TotalKbl" Type="int" Nullable="false" />
+    <Property Name="NIP" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="User_name" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Note" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="trPinjam">
+    <Key>
+      <PropertyRef Name="Nomorpjm" />
+    </Key>
+    <Property Name="Nomorpjm" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tanggalpjm" Type="datetime" Nullable="false" />
+    <Property Name="Totalpjm" Type="int" Nullable="false" />
+    <Property Name="NIP" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="User_name" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Note" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="dbAISModelStoreContainer">
+    <EntitySet Name="tmAlbum" EntityType="Self.tmAlbum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tmBukuTanah" EntityType="Self.tmBukuTanah" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tmControlAccess" EntityType="Self.tmControlAccess" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tmDesa" EntityType="Self.tmDesa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tmGender" EntityType="Self.tmGender" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tmGroupAccess" EntityType="Self.tmGroupAccess" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tmJabatan" EntityType="Self.tmJabatan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tmJenisHak" EntityType="Self.tmJenisHak" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tmKecamatan" EntityType="Self.tmKecamatan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tmStaff" EntityType="Self.tmStaff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tmUser" EntityType="Self.tmUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tmWarkah" EntityType="Self.tmWarkah" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trKembali" EntityType="Self.trKembali" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trPinjam" EntityType="Self.trPinjam" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ComGenVariable" EntityType="Self.ComGenVariable" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ComGenVariable].[Variable] AS [Variable], 
+    [ComGenVariable].[ValueName] AS [ValueName], 
+    [ComGenVariable].[Keterangan] AS [Keterangan]
+    FROM [dbo].[ComGenVariable] AS [ComGenVariable]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="gmComSetting" EntityType="Self.gmComSetting" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [gmComSetting].[CompanyID] AS [CompanyID], 
+    [gmComSetting].[CompanyName] AS [CompanyName], 
+    [gmComSetting].[CompanyAddress] AS [CompanyAddress], 
+    [gmComSetting].[ApplicationVersion] AS [ApplicationVersion], 
+    [gmComSetting].[TokenServiceID] AS [TokenServiceID]
+    FROM [dbo].[gmComSetting] AS [gmComSetting]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="trDetailKembaliBT" EntityType="Self.trDetailKembaliBT" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [trDetailKembaliBT].[Nomorkbl] AS [Nomorkbl], 
+    [trDetailKembaliBT].[NB_Barcode] AS [NB_Barcode], 
+    [trDetailKembaliBT].[JumlahBK] AS [JumlahBK]
+    FROM [dbo].[trDetailKembaliBT] AS [trDetailKembaliBT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="trDetailKembaliWarkah" EntityType="Self.trDetailKembaliWarkah" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [trDetailKembaliWarkah].[Nomorkbl] AS [Nomorkbl], 
+    [trDetailKembaliWarkah].[NW_Barcode] AS [NW_Barcode], 
+    [trDetailKembaliWarkah].[JumlahBK] AS [JumlahBK]
+    FROM [dbo].[trDetailKembaliWarkah] AS [trDetailKembaliWarkah]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="trDetailPinjamBT" EntityType="Self.trDetailPinjamBT" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [trDetailPinjamBT].[Nomorpjm] AS [Nomorpjm], 
+    [trDetailPinjamBT].[NB_Barcode] AS [NB_Barcode], 
+    [trDetailPinjamBT].[JumlahBK] AS [JumlahBK]
+    FROM [dbo].[trDetailPinjamBT] AS [trDetailPinjamBT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="trDetailPinjamWarkah" EntityType="Self.trDetailPinjamWarkah" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [trDetailPinjamWarkah].[Nomorpjm] AS [Nomorpjm], 
+    [trDetailPinjamWarkah].[NW_Barcode] AS [NW_Barcode], 
+    [trDetailPinjamWarkah].[JumlahBK] AS [JumlahBK]
+    FROM [dbo].[trDetailPinjamWarkah] AS [trDetailPinjamWarkah]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
