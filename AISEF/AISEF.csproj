@@ -58,7 +58,9 @@
       <DependentUpon>AISModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="DAL\AlbumRepository.cs" />
+    <Compile Include="DAL\BukuTanahRepository.cs" />
     <Compile Include="DAL\Interface\IAlbumRepository.cs" />
+    <Compile Include="DAL\Interface\IBukuTanahRepository.cs" />
     <Compile Include="DAL\Interface\IDALRepository.cs" />
     <Compile Include="Model\Album.cs" />
     <Compile Include="Model\BukuTanah.cs" />

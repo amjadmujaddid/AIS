@@ -75,7 +75,7 @@ namespace UnitTestAIS
         }
 
         [TestMethod]
-        public void GetAllDataJabatan()
+        public void GetAllDataAlbum()
         {
             GetAllDataAlbumResponse response = _albumService.GetAllDataAlbum();
 

@@ -21,12 +21,10 @@ E:\HyBrings\AIS Source Code\UnitTestAIS\bin\Debug\AISEF.dll
 E:\HyBrings\AIS Source Code\UnitTestAIS\bin\Debug\AISService.dll
 E:\HyBrings\AIS Source Code\UnitTestAIS\bin\Debug\EntityFramework.dll
 E:\HyBrings\AIS Source Code\UnitTestAIS\bin\Debug\EntityFramework.SqlServer.dll
-E:\HyBrings\AIS Source Code\UnitTestAIS\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 E:\HyBrings\AIS Source Code\UnitTestAIS\bin\Debug\AISEF.pdb
 E:\HyBrings\AIS Source Code\UnitTestAIS\bin\Debug\AISService.pdb
 E:\HyBrings\AIS Source Code\UnitTestAIS\bin\Debug\EntityFramework.xml
 E:\HyBrings\AIS Source Code\UnitTestAIS\bin\Debug\EntityFramework.SqlServer.xml
-E:\HyBrings\AIS Source Code\UnitTestAIS\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
 E:\HyBrings\AIS Source Code\UnitTestAIS\obj\Debug\UnitTestAIS.csprojResolveAssemblyReference.cache
 E:\HyBrings\AIS Source Code\UnitTestAIS\obj\Debug\UnitTestAIS.dll
 E:\HyBrings\AIS Source Code\UnitTestAIS\obj\Debug\UnitTestAIS.pdb
