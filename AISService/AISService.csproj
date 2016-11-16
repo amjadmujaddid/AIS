@@ -54,7 +54,9 @@
     <Compile Include="BukuTanahService.cs" />
     <Compile Include="Contract\IAlbumService.cs" />
     <Compile Include="Contract\IBukuTanahService.cs" />
+    <Compile Include="Contract\IGenVariableService.cs" />
     <Compile Include="Contract\ResponseBase.cs" />
+    <Compile Include="GenVariableService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -28,3 +28,17 @@ E:\HyBrings\AIS Source Code\UnitTestAIS\bin\Debug\EntityFramework.SqlServer.xml
 E:\HyBrings\AIS Source Code\UnitTestAIS\obj\Debug\UnitTestAIS.csprojResolveAssemblyReference.cache
 E:\HyBrings\AIS Source Code\UnitTestAIS\obj\Debug\UnitTestAIS.dll
 E:\HyBrings\AIS Source Code\UnitTestAIS\obj\Debug\UnitTestAIS.pdb
+H:\Project\AIS\UnitTestAIS\bin\Debug\UnitTestAIS.dll.config
+H:\Project\AIS\UnitTestAIS\bin\Debug\UnitTestAIS.dll
+H:\Project\AIS\UnitTestAIS\bin\Debug\UnitTestAIS.pdb
+H:\Project\AIS\UnitTestAIS\bin\Debug\AISEF.dll
+H:\Project\AIS\UnitTestAIS\bin\Debug\AISService.dll
+H:\Project\AIS\UnitTestAIS\bin\Debug\EntityFramework.dll
+H:\Project\AIS\UnitTestAIS\bin\Debug\EntityFramework.SqlServer.dll
+H:\Project\AIS\UnitTestAIS\bin\Debug\AISEF.pdb
+H:\Project\AIS\UnitTestAIS\bin\Debug\AISService.pdb
+H:\Project\AIS\UnitTestAIS\bin\Debug\EntityFramework.xml
+H:\Project\AIS\UnitTestAIS\bin\Debug\EntityFramework.SqlServer.xml
+H:\Project\AIS\UnitTestAIS\obj\Debug\UnitTestAIS.csprojResolveAssemblyReference.cache
+H:\Project\AIS\UnitTestAIS\obj\Debug\UnitTestAIS.dll
+H:\Project\AIS\UnitTestAIS\obj\Debug\UnitTestAIS.pdb

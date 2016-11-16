@@ -20,3 +20,14 @@ E:\HyBrings\AIS Source Code\AISService\bin\Debug\EntityFramework.SqlServer.xml
 E:\HyBrings\AIS Source Code\AISService\obj\Debug\AISService.csprojResolveAssemblyReference.cache
 E:\HyBrings\AIS Source Code\AISService\obj\Debug\AISService.dll
 E:\HyBrings\AIS Source Code\AISService\obj\Debug\AISService.pdb
+H:\Project\AIS\AISService\bin\Debug\AISService.dll
+H:\Project\AIS\AISService\bin\Debug\AISService.pdb
+H:\Project\AIS\AISService\bin\Debug\AISEF.dll
+H:\Project\AIS\AISService\bin\Debug\EntityFramework.dll
+H:\Project\AIS\AISService\bin\Debug\EntityFramework.SqlServer.dll
+H:\Project\AIS\AISService\bin\Debug\AISEF.pdb
+H:\Project\AIS\AISService\bin\Debug\EntityFramework.xml
+H:\Project\AIS\AISService\bin\Debug\EntityFramework.SqlServer.xml
+H:\Project\AIS\AISService\obj\Debug\AISService.csprojResolveAssemblyReference.cache
+H:\Project\AIS\AISService\obj\Debug\AISService.dll
+H:\Project\AIS\AISService\obj\Debug\AISService.pdb
