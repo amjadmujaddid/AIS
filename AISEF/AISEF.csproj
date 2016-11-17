@@ -59,9 +59,11 @@
     </Compile>
     <Compile Include="DAL\AlbumRepository.cs" />
     <Compile Include="DAL\BukuTanahRepository.cs" />
+    <Compile Include="DAL\ComSettingRepository.cs" />
     <Compile Include="DAL\GenVariableRepository.cs" />
     <Compile Include="DAL\Interface\IAlbumRepository.cs" />
     <Compile Include="DAL\Interface\IBukuTanahRepository.cs" />
+    <Compile Include="DAL\Interface\IComSettingRepository.cs" />
     <Compile Include="DAL\Interface\IDALRepository.cs" />
     <Compile Include="DAL\Interface\IGenVariableRepository.cs" />
     <Compile Include="Model\Album.cs" />

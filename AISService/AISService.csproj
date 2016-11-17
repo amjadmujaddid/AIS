@@ -52,8 +52,10 @@
   <ItemGroup>
     <Compile Include="AlbumService.cs" />
     <Compile Include="BukuTanahService.cs" />
+    <Compile Include="ComSettingService.cs" />
     <Compile Include="Contract\IAlbumService.cs" />
     <Compile Include="Contract\IBukuTanahService.cs" />
+    <Compile Include="Contract\IComSettingService.cs" />
     <Compile Include="Contract\IGenVariableService.cs" />
     <Compile Include="Contract\ResponseBase.cs" />
     <Compile Include="GenVariableService.cs" />
