@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="dbAISModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="dbAISModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
 warning 6002: The table/view 'dbAIS.dbo.ComGenVariable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="ComGenVariable">
@@ -135,11 +135,6 @@ warning 6002: The table/view 'dbAIS.dbo.gmComSetting' does not have a primary ke
           <Property Name="GroupAccessID" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="ControlAccessID" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'dbAIS.dbo.tmWallboard' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="tmWallboard">
-          <Property Name="Berita" Type="varchar(max)" />
-        </EntityType>-->
         <EntityType Name="tmWarkah">
           <Key>
             <PropertyRef Name="NW_Barcode" />
@@ -222,6 +217,18 @@ warning 6002: The table/view 'dbAIS.dbo.trDetailPinjamWarkah' does not have a pr
           <Property Name="User_name" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="Note" Type="varchar" MaxLength="255" />
         </EntityType>
+        <Association Name="FK_tmBukuTanah_tmAlbum">
+          <End Role="tmAlbum" Type="Self.tmAlbum" Multiplicity="1" />
+          <End Role="tmBukuTanah" Type="Self.tmBukuTanah" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tmAlbum">
+              <PropertyRef Name="No_Album" />
+            </Principal>
+            <Dependent Role="tmBukuTanah">
+              <PropertyRef Name="No_Album" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="dbAISModelStoreContainer">
           <EntitySet Name="tmAlbum" EntityType="Self.tmAlbum" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tmBukuTanah" EntityType="Self.tmBukuTanah" Schema="dbo" store:Type="Tables" />
@@ -281,37 +288,15 @@ warning 6002: The table/view 'dbAIS.dbo.trDetailPinjamWarkah' does not have a pr
     [trDetailPinjamWarkah].[JumlahBK] AS [JumlahBK]
     FROM [dbo].[trDetailPinjamWarkah] AS [trDetailPinjamWarkah]</DefiningQuery>
           </EntitySet>
+          <AssociationSet Name="FK_tmBukuTanah_tmAlbum" Association="Self.FK_tmBukuTanah_tmAlbum">
+            <End Role="tmAlbum" EntitySet="tmAlbum" />
+            <End Role="tmBukuTanah" EntitySet="tmBukuTanah" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="dbAISModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Album">
-          <Key>
-            <PropertyRef Name="No_Album" />
-          </Key>
-          <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="No_Album" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Lemari" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Rak" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Blok" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-        </EntityType>
-        <EntityType Name="BukuTanah">
-          <Key>
-            <PropertyRef Name="NB_Barcode" />
-          </Key>
-          <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="NB_Barcode" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="IDHak" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="NomorHak" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="No_Album" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="IDDesa" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="IDKecamatan" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Luas" Type="Int32" Nullable="false" />
-          <Property Name="PemegangHak" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-        </EntityType>
         <EntityType Name="ControlAccess">
           <Key>
             <PropertyRef Name="ControlAccessID" />
@@ -488,8 +473,6 @@ warning 6002: The table/view 'dbAIS.dbo.trDetailPinjamWarkah' does not have a pr
           <Property Name="JumlahBK" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityContainer Name="dbAISEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Albums" EntityType="dbAISModel.Album" />
-          <EntitySet Name="BukuTanahs" EntityType="dbAISModel.BukuTanah" />
           <EntitySet Name="ControlAccesses" EntityType="dbAISModel.ControlAccess" />
           <EntitySet Name="Desas" EntityType="dbAISModel.Desa" />
           <EntitySet Name="Genders" EntityType="dbAISModel.Gender" />
@@ -508,40 +491,58 @@ warning 6002: The table/view 'dbAIS.dbo.trDetailPinjamWarkah' does not have a pr
           <EntitySet Name="DetailKembaliWarkahs" EntityType="dbAISModel.DetailKembaliWarkah" />
           <EntitySet Name="DetailPinjamBTs" EntityType="dbAISModel.DetailPinjamBT" />
           <EntitySet Name="DetailPinjamWarkahs" EntityType="dbAISModel.DetailPinjamWarkah" />
+          <EntitySet Name="Albums" EntityType="dbAISModel.Album" />
+          <EntitySet Name="BukuTanahs" EntityType="dbAISModel.BukuTanah" />
+          <AssociationSet Name="FK_tmBukuTanah_tmAlbum" Association="dbAISModel.FK_tmBukuTanah_tmAlbum">
+            <End Role="tmAlbum" EntitySet="Albums" />
+            <End Role="tmBukuTanah" EntitySet="BukuTanahs" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Album">
+          <Key>
+            <PropertyRef Name="No_Album" />
+          </Key>
+          <Property Name="RecordStatus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="No_Album" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Lemari" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Rak" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Blok" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BukuTanahs" Relationship="dbAISModel.FK_tmBukuTanah_tmAlbum" FromRole="tmAlbum" ToRole="tmBukuTanah" />
+        </EntityType>
+        <EntityType Name="BukuTanah">
+          <Key>
+            <PropertyRef Name="NB_Barcode" />
+          </Key>
+          <Property Name="RecordStatus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="NB_Barcode" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="IDHak" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="NomorHak" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="No_Album" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="IDDesa" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="IDKecamatan" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Luas" Type="Int32" Nullable="false" />
+          <Property Name="PemegangHak" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Album" Relationship="dbAISModel.FK_tmBukuTanah_tmAlbum" FromRole="tmBukuTanah" ToRole="tmAlbum" />
+        </EntityType>
+        <Association Name="FK_tmBukuTanah_tmAlbum">
+          <End Type="dbAISModel.Album" Role="tmAlbum" Multiplicity="1" />
+          <End Type="dbAISModel.BukuTanah" Role="tmBukuTanah" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tmAlbum">
+              <PropertyRef Name="No_Album" />
+            </Principal>
+            <Dependent Role="tmBukuTanah">
+              <PropertyRef Name="No_Album" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="dbAISModelStoreContainer" CdmEntityContainer="dbAISEntities">
-          <EntitySetMapping Name="Albums">
-            <EntityTypeMapping TypeName="dbAISModel.Album">
-              <MappingFragment StoreEntitySet="tmAlbum">
-                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
-                <ScalarProperty Name="No_Album" ColumnName="No_Album" />
-                <ScalarProperty Name="Lemari" ColumnName="Lemari" />
-                <ScalarProperty Name="Rak" ColumnName="Rak" />
-                <ScalarProperty Name="Blok" ColumnName="Blok" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="BukuTanahs">
-            <EntityTypeMapping TypeName="dbAISModel.BukuTanah">
-              <MappingFragment StoreEntitySet="tmBukuTanah">
-                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
-                <ScalarProperty Name="NB_Barcode" ColumnName="NB_Barcode" />
-                <ScalarProperty Name="IDHak" ColumnName="IDHak" />
-                <ScalarProperty Name="NomorHak" ColumnName="NomorHak" />
-                <ScalarProperty Name="No_Album" ColumnName="No_Album" />
-                <ScalarProperty Name="IDDesa" ColumnName="IDDesa" />
-                <ScalarProperty Name="IDKecamatan" ColumnName="IDKecamatan" />
-                <ScalarProperty Name="Luas" ColumnName="Luas" />
-                <ScalarProperty Name="PemegangHak" ColumnName="PemegangHak" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="ControlAccesses">
             <EntityTypeMapping TypeName="dbAISModel.ControlAccess">
               <MappingFragment StoreEntitySet="tmControlAccess">
@@ -721,6 +722,33 @@ warning 6002: The table/view 'dbAIS.dbo.trDetailPinjamWarkah' does not have a pr
                 <ScalarProperty Name="Nomorpjm" ColumnName="Nomorpjm" />
                 <ScalarProperty Name="NW_Barcode" ColumnName="NW_Barcode" />
                 <ScalarProperty Name="JumlahBK" ColumnName="JumlahBK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Albums">
+            <EntityTypeMapping TypeName="dbAISModel.Album">
+              <MappingFragment StoreEntitySet="tmAlbum">
+                <ScalarProperty Name="Blok" ColumnName="Blok" />
+                <ScalarProperty Name="Rak" ColumnName="Rak" />
+                <ScalarProperty Name="Lemari" ColumnName="Lemari" />
+                <ScalarProperty Name="No_Album" ColumnName="No_Album" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BukuTanahs">
+            <EntityTypeMapping TypeName="dbAISModel.BukuTanah">
+              <MappingFragment StoreEntitySet="tmBukuTanah">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="PemegangHak" ColumnName="PemegangHak" />
+                <ScalarProperty Name="Luas" ColumnName="Luas" />
+                <ScalarProperty Name="IDKecamatan" ColumnName="IDKecamatan" />
+                <ScalarProperty Name="IDDesa" ColumnName="IDDesa" />
+                <ScalarProperty Name="No_Album" ColumnName="No_Album" />
+                <ScalarProperty Name="NomorHak" ColumnName="NomorHak" />
+                <ScalarProperty Name="IDHak" ColumnName="IDHak" />
+                <ScalarProperty Name="NB_Barcode" ColumnName="NB_Barcode" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

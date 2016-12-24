@@ -5,8 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="a5d7e33390d44a95a9f6a4c7f87a2cf6" Name="Diagram1">
-        <EntityTypeShape EntityType="dbAISModel.Album" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.BukuTanah" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dbAISModel.ControlAccess" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dbAISModel.Desa" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dbAISModel.Gender" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
@@ -25,6 +23,9 @@
         <EntityTypeShape EntityType="dbAISModel.DetailKembaliWarkah" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dbAISModel.DetailPinjamBT" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dbAISModel.DetailPinjamWarkah" Width="1.5" PointX="6.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbAISModel.Album" Width="1.5" PointX="9" PointY="10.875" />
+        <EntityTypeShape EntityType="dbAISModel.BukuTanah" Width="1.5" PointX="11.625" PointY="10.875" />
+        <AssociationConnector Association="dbAISModel.FK_tmBukuTanah_tmAlbum" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

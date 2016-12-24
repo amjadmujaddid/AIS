@@ -130,11 +130,6 @@ warning 6002: The table/view 'dbAIS.dbo.gmComSetting' does not have a primary ke
     <Property Name="GroupAccessID" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="ControlAccessID" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6013: The table/view 'dbAIS.dbo.tmWallboard' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="tmWallboard">
-          <Property Name="Berita" Type="varchar(max)" />
-        </EntityType>-->
   <EntityType Name="tmWarkah">
     <Key>
       <PropertyRef Name="NW_Barcode" />
@@ -217,6 +212,18 @@ warning 6002: The table/view 'dbAIS.dbo.trDetailPinjamWarkah' does not have a pr
     <Property Name="User_name" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="Note" Type="varchar" MaxLength="255" />
   </EntityType>
+  <Association Name="FK_tmBukuTanah_tmAlbum">
+    <End Role="tmAlbum" Type="Self.tmAlbum" Multiplicity="1" />
+    <End Role="tmBukuTanah" Type="Self.tmBukuTanah" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tmAlbum">
+        <PropertyRef Name="No_Album" />
+      </Principal>
+      <Dependent Role="tmBukuTanah">
+        <PropertyRef Name="No_Album" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="dbAISModelStoreContainer">
     <EntitySet Name="tmAlbum" EntityType="Self.tmAlbum" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tmBukuTanah" EntityType="Self.tmBukuTanah" Schema="dbo" store:Type="Tables" />
@@ -276,5 +283,9 @@ warning 6002: The table/view 'dbAIS.dbo.trDetailPinjamWarkah' does not have a pr
     [trDetailPinjamWarkah].[JumlahBK] AS [JumlahBK]
     FROM [dbo].[trDetailPinjamWarkah] AS [trDetailPinjamWarkah]</DefiningQuery>
     </EntitySet>
+    <AssociationSet Name="FK_tmBukuTanah_tmAlbum" Association="Self.FK_tmBukuTanah_tmAlbum">
+      <End Role="tmAlbum" EntitySet="tmAlbum" />
+      <End Role="tmBukuTanah" EntitySet="tmBukuTanah" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

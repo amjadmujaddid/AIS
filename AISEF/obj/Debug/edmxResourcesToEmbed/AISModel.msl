@@ -1,33 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="dbAISModelStoreContainer" CdmEntityContainer="dbAISEntities">
-    <EntitySetMapping Name="Albums">
-      <EntityTypeMapping TypeName="dbAISModel.Album">
-        <MappingFragment StoreEntitySet="tmAlbum">
-          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
-          <ScalarProperty Name="No_Album" ColumnName="No_Album" />
-          <ScalarProperty Name="Lemari" ColumnName="Lemari" />
-          <ScalarProperty Name="Rak" ColumnName="Rak" />
-          <ScalarProperty Name="Blok" ColumnName="Blok" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="BukuTanahs">
-      <EntityTypeMapping TypeName="dbAISModel.BukuTanah">
-        <MappingFragment StoreEntitySet="tmBukuTanah">
-          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
-          <ScalarProperty Name="NB_Barcode" ColumnName="NB_Barcode" />
-          <ScalarProperty Name="IDHak" ColumnName="IDHak" />
-          <ScalarProperty Name="NomorHak" ColumnName="NomorHak" />
-          <ScalarProperty Name="No_Album" ColumnName="No_Album" />
-          <ScalarProperty Name="IDDesa" ColumnName="IDDesa" />
-          <ScalarProperty Name="IDKecamatan" ColumnName="IDKecamatan" />
-          <ScalarProperty Name="Luas" ColumnName="Luas" />
-          <ScalarProperty Name="PemegangHak" ColumnName="PemegangHak" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="ControlAccesses">
       <EntityTypeMapping TypeName="dbAISModel.ControlAccess">
         <MappingFragment StoreEntitySet="tmControlAccess">
@@ -207,6 +180,33 @@
           <ScalarProperty Name="Nomorpjm" ColumnName="Nomorpjm" />
           <ScalarProperty Name="NW_Barcode" ColumnName="NW_Barcode" />
           <ScalarProperty Name="JumlahBK" ColumnName="JumlahBK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Albums">
+      <EntityTypeMapping TypeName="dbAISModel.Album">
+        <MappingFragment StoreEntitySet="tmAlbum">
+          <ScalarProperty Name="Blok" ColumnName="Blok" />
+          <ScalarProperty Name="Rak" ColumnName="Rak" />
+          <ScalarProperty Name="Lemari" ColumnName="Lemari" />
+          <ScalarProperty Name="No_Album" ColumnName="No_Album" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BukuTanahs">
+      <EntityTypeMapping TypeName="dbAISModel.BukuTanah">
+        <MappingFragment StoreEntitySet="tmBukuTanah">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PemegangHak" ColumnName="PemegangHak" />
+          <ScalarProperty Name="Luas" ColumnName="Luas" />
+          <ScalarProperty Name="IDKecamatan" ColumnName="IDKecamatan" />
+          <ScalarProperty Name="IDDesa" ColumnName="IDDesa" />
+          <ScalarProperty Name="No_Album" ColumnName="No_Album" />
+          <ScalarProperty Name="NomorHak" ColumnName="NomorHak" />
+          <ScalarProperty Name="IDHak" ColumnName="IDHak" />
+          <ScalarProperty Name="NB_Barcode" ColumnName="NB_Barcode" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -18,5 +18,7 @@ namespace AISEF.Model
         public int Luas { get; set; }
         public string PemegangHak { get; set; }
         public string Status { get; set; }
+
+        public virtual Album Album { get; set; }
     }
-}
+    }

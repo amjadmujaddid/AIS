@@ -28,3 +28,13 @@ H:\Project\AIS\AISEF\bin\Debug\EntityFramework.SqlServer.xml
 H:\Project\AIS\AISEF\obj\Debug\AISEF.csprojResolveAssemblyReference.cache
 H:\Project\AIS\AISEF\obj\Debug\AISEF.dll
 H:\Project\AIS\AISEF\obj\Debug\AISEF.pdb
+E:\HyBrings\HyBrings Source Code\AIS\AISEF\bin\Debug\AISEF.dll.config
+E:\HyBrings\HyBrings Source Code\AIS\AISEF\bin\Debug\AISEF.dll
+E:\HyBrings\HyBrings Source Code\AIS\AISEF\bin\Debug\AISEF.pdb
+E:\HyBrings\HyBrings Source Code\AIS\AISEF\bin\Debug\EntityFramework.dll
+E:\HyBrings\HyBrings Source Code\AIS\AISEF\bin\Debug\EntityFramework.SqlServer.dll
+E:\HyBrings\HyBrings Source Code\AIS\AISEF\bin\Debug\EntityFramework.xml
+E:\HyBrings\HyBrings Source Code\AIS\AISEF\bin\Debug\EntityFramework.SqlServer.xml
+E:\HyBrings\HyBrings Source Code\AIS\AISEF\obj\Debug\AISEF.csprojResolveAssemblyReference.cache
+E:\HyBrings\HyBrings Source Code\AIS\AISEF\obj\Debug\AISEF.dll
+E:\HyBrings\HyBrings Source Code\AIS\AISEF\obj\Debug\AISEF.pdb

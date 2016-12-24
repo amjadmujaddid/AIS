@@ -29,7 +29,7 @@ namespace UnitTestAIS.Master
             NB_Barcode = "111",
             IDHak = "HM",
             NomorHak = "1",
-            No_Album = "1",
+            No_Album = "101", // this field already exist in the table Album reference
             IDDesa = "1",
             IDKecamatan="1",
             Luas = 100,
@@ -43,7 +43,7 @@ namespace UnitTestAIS.Master
             NB_Barcode = "111",
             IDHak = "HGB",
             NomorHak = "2",
-            No_Album = "2",
+            No_Album = "101",
             IDDesa = "2",
             IDKecamatan = "2",
             Luas = 200,
