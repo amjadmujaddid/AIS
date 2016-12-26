@@ -11,5 +11,8 @@ namespace AISEF.Model
         public string Nomorkbl { get; set; }
         public string NW_Barcode { get; set; }
         public int JumlahBK { get; set; }
+
+        public virtual Warkah Warkah { get; set; }
+        public virtual Kembali Kembali { get; set; }
     }
 }

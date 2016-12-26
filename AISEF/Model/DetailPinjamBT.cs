@@ -11,5 +11,8 @@ namespace AISEF.Model
         public string Nomorpjm { get; set; }
         public string NB_Barcode { get; set; }
         public int JumlahBK { get; set; }
+
+        public virtual BukuTanah BukuTanah { get; set; }
+        public virtual Pinjam Pinjam { get; set; }
     }
 }

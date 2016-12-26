@@ -12,6 +12,7 @@ namespace AISEF.Model
         public Album()
         {
             this.BukuTanahs = new HashSet<BukuTanah>();
+            this.Warkahs = new HashSet<Warkah>();
         }
 
         public string RecordStatus { get; set; }
@@ -22,5 +23,7 @@ namespace AISEF.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BukuTanah> BukuTanahs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Warkah> Warkahs { get; set; }
     }
 }
