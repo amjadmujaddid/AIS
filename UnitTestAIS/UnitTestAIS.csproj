@@ -64,6 +64,7 @@
     <Compile Include="Master\AlbumUT.cs" />
     <Compile Include="Master\BukuTanahUT.cs" />
     <Compile Include="Master\ComSettingUT.cs" />
+    <Compile Include="Master\DesaUT.cs" />
     <Compile Include="Master\GenVariableUT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

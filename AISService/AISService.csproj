@@ -56,8 +56,10 @@
     <Compile Include="Contract\IAlbumService.cs" />
     <Compile Include="Contract\IBukuTanahService.cs" />
     <Compile Include="Contract\IComSettingService.cs" />
+    <Compile Include="Contract\IDesaService.cs" />
     <Compile Include="Contract\IGenVariableService.cs" />
     <Compile Include="Contract\ResponseBase.cs" />
+    <Compile Include="DesaService.cs" />
     <Compile Include="GenVariableService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

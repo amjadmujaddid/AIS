@@ -1,188 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="dbAISModelStoreContainer" CdmEntityContainer="dbAISEntities">
-    <EntitySetMapping Name="ControlAccesses">
-      <EntityTypeMapping TypeName="dbAISModel.ControlAccess">
-        <MappingFragment StoreEntitySet="tmControlAccess">
-          <ScalarProperty Name="ControlAccessID" ColumnName="ControlAccessID" />
-          <ScalarProperty Name="ControlAccessName" ColumnName="ControlAccessName" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Desas">
-      <EntityTypeMapping TypeName="dbAISModel.Desa">
-        <MappingFragment StoreEntitySet="tmDesa">
-          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
-          <ScalarProperty Name="IDDesa" ColumnName="IDDesa" />
-          <ScalarProperty Name="NamaDesa" ColumnName="NamaDesa" />
-          <ScalarProperty Name="IDKecamatan" ColumnName="IDKecamatan" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Genders">
-      <EntityTypeMapping TypeName="dbAISModel.Gender">
-        <MappingFragment StoreEntitySet="tmGender">
-          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
-          <ScalarProperty Name="IDJekel" ColumnName="IDJekel" />
-          <ScalarProperty Name="NamaJekel" ColumnName="NamaJekel" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="GroupAccesses">
-      <EntityTypeMapping TypeName="dbAISModel.GroupAccess">
-        <MappingFragment StoreEntitySet="tmGroupAccess">
-          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
-          <ScalarProperty Name="GroupAccessID" ColumnName="GroupAccessID" />
-          <ScalarProperty Name="GroupAccessName" ColumnName="GroupAccessName" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Jabatans">
-      <EntityTypeMapping TypeName="dbAISModel.Jabatan">
-        <MappingFragment StoreEntitySet="tmJabatan">
-          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
-          <ScalarProperty Name="IDJabatan" ColumnName="IDJabatan" />
-          <ScalarProperty Name="NamaJabatan" ColumnName="NamaJabatan" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="JenisHaks">
-      <EntityTypeMapping TypeName="dbAISModel.JenisHak">
-        <MappingFragment StoreEntitySet="tmJenisHak">
-          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
-          <ScalarProperty Name="IDHak" ColumnName="IDHak" />
-          <ScalarProperty Name="NamaHak" ColumnName="NamaHak" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Kecamatans">
-      <EntityTypeMapping TypeName="dbAISModel.Kecamatan">
-        <MappingFragment StoreEntitySet="tmKecamatan">
-          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
-          <ScalarProperty Name="IDKecamatan" ColumnName="IDKecamatan" />
-          <ScalarProperty Name="NamaKecamatan" ColumnName="NamaKecamatan" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Staffs">
-      <EntityTypeMapping TypeName="dbAISModel.Staff">
-        <MappingFragment StoreEntitySet="tmStaff">
-          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
-          <ScalarProperty Name="NIP" ColumnName="NIP" />
-          <ScalarProperty Name="NamaLengkap" ColumnName="NamaLengkap" />
-          <ScalarProperty Name="IDJabatan" ColumnName="IDJabatan" />
-          <ScalarProperty Name="IDJekel" ColumnName="IDJekel" />
-          <ScalarProperty Name="Alamat" ColumnName="Alamat" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="dbAISModel.User">
-        <MappingFragment StoreEntitySet="tmUser">
-          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
-          <ScalarProperty Name="User_name" ColumnName="User_name" />
-          <ScalarProperty Name="NamaLengkap" ColumnName="NamaLengkap" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="OldPassword" ColumnName="OldPassword" />
-          <ScalarProperty Name="LastPassword" ColumnName="LastPassword" />
-          <ScalarProperty Name="GroupAccessID" ColumnName="GroupAccessID" />
-          <ScalarProperty Name="ControlAccessID" ColumnName="ControlAccessID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Warkahs">
-      <EntityTypeMapping TypeName="dbAISModel.Warkah">
-        <MappingFragment StoreEntitySet="tmWarkah">
-          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
-          <ScalarProperty Name="NW_Barcode" ColumnName="NW_Barcode" />
-          <ScalarProperty Name="Jenis" ColumnName="Jenis" />
-          <ScalarProperty Name="NomorWarkah" ColumnName="NomorWarkah" />
-          <ScalarProperty Name="Tahun" ColumnName="Tahun" />
-          <ScalarProperty Name="No_Album" ColumnName="No_Album" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Kembalis">
-      <EntityTypeMapping TypeName="dbAISModel.Kembali">
-        <MappingFragment StoreEntitySet="trKembali">
-          <ScalarProperty Name="NomorKbl" ColumnName="NomorKbl" />
-          <ScalarProperty Name="TanggalKbl" ColumnName="TanggalKbl" />
-          <ScalarProperty Name="TotalKbl" ColumnName="TotalKbl" />
-          <ScalarProperty Name="NIP" ColumnName="NIP" />
-          <ScalarProperty Name="User_name" ColumnName="User_name" />
-          <ScalarProperty Name="Note" ColumnName="Note" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Pinjams">
-      <EntityTypeMapping TypeName="dbAISModel.Pinjam">
-        <MappingFragment StoreEntitySet="trPinjam">
-          <ScalarProperty Name="Nomorpjm" ColumnName="Nomorpjm" />
-          <ScalarProperty Name="Tanggalpjm" ColumnName="Tanggalpjm" />
-          <ScalarProperty Name="Totalpjm" ColumnName="Totalpjm" />
-          <ScalarProperty Name="NIP" ColumnName="NIP" />
-          <ScalarProperty Name="User_name" ColumnName="User_name" />
-          <ScalarProperty Name="Note" ColumnName="Note" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="GenVariables">
-      <EntityTypeMapping TypeName="dbAISModel.GenVariable">
-        <MappingFragment StoreEntitySet="ComGenVariable">
-          <ScalarProperty Name="Variable" ColumnName="Variable" />
-          <ScalarProperty Name="ValueName" ColumnName="ValueName" />
-          <ScalarProperty Name="Keterangan" ColumnName="Keterangan" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ComSettings">
-      <EntityTypeMapping TypeName="dbAISModel.ComSetting">
-        <MappingFragment StoreEntitySet="gmComSetting">
-          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
-          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
-          <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
-          <ScalarProperty Name="ApplicationVersion" ColumnName="ApplicationVersion" />
-          <ScalarProperty Name="TokenServiceID" ColumnName="TokenServiceID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="DetailKembaliBTs">
-      <EntityTypeMapping TypeName="dbAISModel.DetailKembaliBT">
-        <MappingFragment StoreEntitySet="trDetailKembaliBT">
-          <ScalarProperty Name="Nomorkbl" ColumnName="Nomorkbl" />
-          <ScalarProperty Name="NB_Barcode" ColumnName="NB_Barcode" />
-          <ScalarProperty Name="JumlahBK" ColumnName="JumlahBK" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="DetailKembaliWarkahs">
-      <EntityTypeMapping TypeName="dbAISModel.DetailKembaliWarkah">
-        <MappingFragment StoreEntitySet="trDetailKembaliWarkah">
-          <ScalarProperty Name="Nomorkbl" ColumnName="Nomorkbl" />
-          <ScalarProperty Name="NW_Barcode" ColumnName="NW_Barcode" />
-          <ScalarProperty Name="JumlahBK" ColumnName="JumlahBK" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="DetailPinjamBTs">
-      <EntityTypeMapping TypeName="dbAISModel.DetailPinjamBT">
-        <MappingFragment StoreEntitySet="trDetailPinjamBT">
-          <ScalarProperty Name="Nomorpjm" ColumnName="Nomorpjm" />
-          <ScalarProperty Name="NB_Barcode" ColumnName="NB_Barcode" />
-          <ScalarProperty Name="JumlahBK" ColumnName="JumlahBK" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="DetailPinjamWarkahs">
-      <EntityTypeMapping TypeName="dbAISModel.DetailPinjamWarkah">
-        <MappingFragment StoreEntitySet="trDetailPinjamWarkah">
-          <ScalarProperty Name="Nomorpjm" ColumnName="Nomorpjm" />
-          <ScalarProperty Name="NW_Barcode" ColumnName="NW_Barcode" />
-          <ScalarProperty Name="JumlahBK" ColumnName="JumlahBK" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Albums">
       <EntityTypeMapping TypeName="dbAISModel.Album">
         <MappingFragment StoreEntitySet="tmAlbum">
@@ -207,6 +25,174 @@
           <ScalarProperty Name="IDHak" ColumnName="IDHak" />
           <ScalarProperty Name="NB_Barcode" ColumnName="NB_Barcode" />
           <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlAccesses">
+      <EntityTypeMapping TypeName="dbAISModel.ControlAccess">
+        <MappingFragment StoreEntitySet="tmControlAccess">
+          <ScalarProperty Name="ControlAccessName" ColumnName="ControlAccessName" />
+          <ScalarProperty Name="ControlAccessID" ColumnName="ControlAccessID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Desas">
+      <EntityTypeMapping TypeName="dbAISModel.Desa">
+        <MappingFragment StoreEntitySet="tmDesa">
+          <ScalarProperty Name="IDKecamatan" ColumnName="IDKecamatan" />
+          <ScalarProperty Name="NamaDesa" ColumnName="NamaDesa" />
+          <ScalarProperty Name="IDDesa" ColumnName="IDDesa" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genders">
+      <EntityTypeMapping TypeName="dbAISModel.Gender">
+        <MappingFragment StoreEntitySet="tmGender">
+          <ScalarProperty Name="NamaJekel" ColumnName="NamaJekel" />
+          <ScalarProperty Name="IDJekel" ColumnName="IDJekel" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupAccesses">
+      <EntityTypeMapping TypeName="dbAISModel.GroupAccess">
+        <MappingFragment StoreEntitySet="tmGroupAccess">
+          <ScalarProperty Name="GroupAccessName" ColumnName="GroupAccessName" />
+          <ScalarProperty Name="GroupAccessID" ColumnName="GroupAccessID" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jabatans">
+      <EntityTypeMapping TypeName="dbAISModel.Jabatan">
+        <MappingFragment StoreEntitySet="tmJabatan">
+          <ScalarProperty Name="NamaJabatan" ColumnName="NamaJabatan" />
+          <ScalarProperty Name="IDJabatan" ColumnName="IDJabatan" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JenisHaks">
+      <EntityTypeMapping TypeName="dbAISModel.JenisHak">
+        <MappingFragment StoreEntitySet="tmJenisHak">
+          <ScalarProperty Name="NamaHak" ColumnName="NamaHak" />
+          <ScalarProperty Name="IDHak" ColumnName="IDHak" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kecamatans">
+      <EntityTypeMapping TypeName="dbAISModel.Kecamatan">
+        <MappingFragment StoreEntitySet="tmKecamatan">
+          <ScalarProperty Name="NamaKecamatan" ColumnName="NamaKecamatan" />
+          <ScalarProperty Name="IDKecamatan" ColumnName="IDKecamatan" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staffs">
+      <EntityTypeMapping TypeName="dbAISModel.Staff">
+        <MappingFragment StoreEntitySet="tmStaff">
+          <ScalarProperty Name="Alamat" ColumnName="Alamat" />
+          <ScalarProperty Name="IDJekel" ColumnName="IDJekel" />
+          <ScalarProperty Name="IDJabatan" ColumnName="IDJabatan" />
+          <ScalarProperty Name="NamaLengkap" ColumnName="NamaLengkap" />
+          <ScalarProperty Name="NIP" ColumnName="NIP" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Warkahs">
+      <EntityTypeMapping TypeName="dbAISModel.Warkah">
+        <MappingFragment StoreEntitySet="tmWarkah">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="No_Album" ColumnName="No_Album" />
+          <ScalarProperty Name="Tahun" ColumnName="Tahun" />
+          <ScalarProperty Name="NomorWarkah" ColumnName="NomorWarkah" />
+          <ScalarProperty Name="Jenis" ColumnName="Jenis" />
+          <ScalarProperty Name="NW_Barcode" ColumnName="NW_Barcode" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kembalis">
+      <EntityTypeMapping TypeName="dbAISModel.Kembali">
+        <MappingFragment StoreEntitySet="trKembali">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="User_name" ColumnName="User_name" />
+          <ScalarProperty Name="NIP" ColumnName="NIP" />
+          <ScalarProperty Name="TotalKbl" ColumnName="TotalKbl" />
+          <ScalarProperty Name="TanggalKbl" ColumnName="TanggalKbl" />
+          <ScalarProperty Name="NomorKbl" ColumnName="NomorKbl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pinjams">
+      <EntityTypeMapping TypeName="dbAISModel.Pinjam">
+        <MappingFragment StoreEntitySet="trPinjam">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="User_name" ColumnName="User_name" />
+          <ScalarProperty Name="NIP" ColumnName="NIP" />
+          <ScalarProperty Name="Totalpjm" ColumnName="Totalpjm" />
+          <ScalarProperty Name="Tanggalpjm" ColumnName="Tanggalpjm" />
+          <ScalarProperty Name="Nomorpjm" ColumnName="Nomorpjm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GenVariables">
+      <EntityTypeMapping TypeName="dbAISModel.GenVariable">
+        <MappingFragment StoreEntitySet="ComGenVariable">
+          <ScalarProperty Name="Keterangan" ColumnName="Keterangan" />
+          <ScalarProperty Name="ValueName" ColumnName="ValueName" />
+          <ScalarProperty Name="Variable" ColumnName="Variable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComSettings">
+      <EntityTypeMapping TypeName="dbAISModel.ComSetting">
+        <MappingFragment StoreEntitySet="gmComSetting">
+          <ScalarProperty Name="TokenServiceID" ColumnName="TokenServiceID" />
+          <ScalarProperty Name="ApplicationVersion" ColumnName="ApplicationVersion" />
+          <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetailKembaliBTs">
+      <EntityTypeMapping TypeName="dbAISModel.DetailKembaliBT">
+        <MappingFragment StoreEntitySet="trDetailKembaliBT">
+          <ScalarProperty Name="JumlahBK" ColumnName="JumlahBK" />
+          <ScalarProperty Name="NB_Barcode" ColumnName="NB_Barcode" />
+          <ScalarProperty Name="Nomorkbl" ColumnName="Nomorkbl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetailKembaliWarkahs">
+      <EntityTypeMapping TypeName="dbAISModel.DetailKembaliWarkah">
+        <MappingFragment StoreEntitySet="trDetailKembaliWarkah">
+          <ScalarProperty Name="JumlahBK" ColumnName="JumlahBK" />
+          <ScalarProperty Name="NW_Barcode" ColumnName="NW_Barcode" />
+          <ScalarProperty Name="Nomorkbl" ColumnName="Nomorkbl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetailPinjamBTs">
+      <EntityTypeMapping TypeName="dbAISModel.DetailPinjamBT">
+        <MappingFragment StoreEntitySet="trDetailPinjamBT">
+          <ScalarProperty Name="JumlahBK" ColumnName="JumlahBK" />
+          <ScalarProperty Name="NB_Barcode" ColumnName="NB_Barcode" />
+          <ScalarProperty Name="Nomorpjm" ColumnName="Nomorpjm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetailPinjamWarkahs">
+      <EntityTypeMapping TypeName="dbAISModel.DetailPinjamWarkah">
+        <MappingFragment StoreEntitySet="trDetailPinjamWarkah">
+          <ScalarProperty Name="JumlahBK" ColumnName="JumlahBK" />
+          <ScalarProperty Name="NW_Barcode" ColumnName="NW_Barcode" />
+          <ScalarProperty Name="Nomorpjm" ColumnName="Nomorpjm" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

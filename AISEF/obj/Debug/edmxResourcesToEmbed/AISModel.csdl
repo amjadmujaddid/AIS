@@ -1,181 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="dbAISModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="ControlAccess">
-    <Key>
-      <PropertyRef Name="ControlAccessID" />
-    </Key>
-    <Property Name="ControlAccessID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="ControlAccessName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Desa">
-    <Key>
-      <PropertyRef Name="IDDesa" />
-    </Key>
-    <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="IDDesa" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="NamaDesa" Type="String" MaxLength="125" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="IDKecamatan" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Gender">
-    <Key>
-      <PropertyRef Name="IDJekel" />
-    </Key>
-    <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="IDJekel" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="NamaJekel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
-  </EntityType>
-  <EntityType Name="GroupAccess">
-    <Key>
-      <PropertyRef Name="GroupAccessID" />
-    </Key>
-    <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="GroupAccessID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="GroupAccessName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Jabatan">
-    <Key>
-      <PropertyRef Name="IDJabatan" />
-    </Key>
-    <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="IDJabatan" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="NamaJabatan" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-  </EntityType>
-  <EntityType Name="JenisHak">
-    <Key>
-      <PropertyRef Name="IDHak" />
-    </Key>
-    <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="IDHak" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="NamaHak" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Kecamatan">
-    <Key>
-      <PropertyRef Name="IDKecamatan" />
-    </Key>
-    <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="IDKecamatan" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="NamaKecamatan" Type="String" MaxLength="125" FixedLength="false" Unicode="false" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Staff">
-    <Key>
-      <PropertyRef Name="NIP" />
-    </Key>
-    <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="NIP" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="NamaLengkap" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="IDJabatan" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="IDJekel" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="Alamat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-  </EntityType>
-  <EntityType Name="User">
-    <Key>
-      <PropertyRef Name="User_name" />
-    </Key>
-    <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="User_name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="NamaLengkap" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="OldPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="LastPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="GroupAccessID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="ControlAccessID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Warkah">
-    <Key>
-      <PropertyRef Name="NW_Barcode" />
-    </Key>
-    <Property Name="RecordStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="NW_Barcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Jenis" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="NomorWarkah" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Tahun" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="No_Album" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Kembali">
-    <Key>
-      <PropertyRef Name="NomorKbl" />
-    </Key>
-    <Property Name="NomorKbl" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="TanggalKbl" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="TotalKbl" Type="Int32" Nullable="false" />
-    <Property Name="NIP" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="User_name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-  </EntityType>
-  <EntityType Name="Pinjam">
-    <Key>
-      <PropertyRef Name="Nomorpjm" />
-    </Key>
-    <Property Name="Nomorpjm" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Tanggalpjm" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="Totalpjm" Type="Int32" Nullable="false" />
-    <Property Name="NIP" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="User_name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-  </EntityType>
-  <EntityType Name="GenVariable">
-    <Key>
-      <PropertyRef Name="Variable" />
-      <PropertyRef Name="ValueName" />
-    </Key>
-    <Property Name="Variable" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="ValueName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Keterangan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-  </EntityType>
-  <EntityType Name="ComSetting">
-    <Key>
-      <PropertyRef Name="CompanyID" />
-      <PropertyRef Name="CompanyName" />
-      <PropertyRef Name="CompanyAddress" />
-    </Key>
-    <Property Name="CompanyID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="CompanyName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="CompanyAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="ApplicationVersion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="TokenServiceID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-  </EntityType>
-  <EntityType Name="DetailKembaliBT">
-    <Key>
-      <PropertyRef Name="Nomorkbl" />
-      <PropertyRef Name="NB_Barcode" />
-      <PropertyRef Name="JumlahBK" />
-    </Key>
-    <Property Name="Nomorkbl" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="NB_Barcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="JumlahBK" Type="Int32" Nullable="false" />
-  </EntityType>
-  <EntityType Name="DetailKembaliWarkah">
-    <Key>
-      <PropertyRef Name="Nomorkbl" />
-      <PropertyRef Name="NW_Barcode" />
-      <PropertyRef Name="JumlahBK" />
-    </Key>
-    <Property Name="Nomorkbl" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="NW_Barcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="JumlahBK" Type="Int32" Nullable="false" />
-  </EntityType>
-  <EntityType Name="DetailPinjamBT">
-    <Key>
-      <PropertyRef Name="Nomorpjm" />
-      <PropertyRef Name="NB_Barcode" />
-      <PropertyRef Name="JumlahBK" />
-    </Key>
-    <Property Name="Nomorpjm" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="NB_Barcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="JumlahBK" Type="Int32" Nullable="false" />
-  </EntityType>
-  <EntityType Name="DetailPinjamWarkah">
-    <Key>
-      <PropertyRef Name="Nomorpjm" />
-      <PropertyRef Name="NW_Barcode" />
-      <PropertyRef Name="JumlahBK" />
-    </Key>
-    <Property Name="Nomorpjm" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="NW_Barcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="JumlahBK" Type="Int32" Nullable="false" />
-  </EntityType>
   <EntityContainer Name="dbAISEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Albums" EntityType="dbAISModel.Album" />
+    <EntitySet Name="BukuTanahs" EntityType="dbAISModel.BukuTanah" />
     <EntitySet Name="ControlAccesses" EntityType="dbAISModel.ControlAccess" />
     <EntitySet Name="Desas" EntityType="dbAISModel.Desa" />
     <EntitySet Name="Genders" EntityType="dbAISModel.Gender" />
@@ -184,7 +11,6 @@
     <EntitySet Name="JenisHaks" EntityType="dbAISModel.JenisHak" />
     <EntitySet Name="Kecamatans" EntityType="dbAISModel.Kecamatan" />
     <EntitySet Name="Staffs" EntityType="dbAISModel.Staff" />
-    <EntitySet Name="Users" EntityType="dbAISModel.User" />
     <EntitySet Name="Warkahs" EntityType="dbAISModel.Warkah" />
     <EntitySet Name="Kembalis" EntityType="dbAISModel.Kembali" />
     <EntitySet Name="Pinjams" EntityType="dbAISModel.Pinjam" />
@@ -194,11 +20,77 @@
     <EntitySet Name="DetailKembaliWarkahs" EntityType="dbAISModel.DetailKembaliWarkah" />
     <EntitySet Name="DetailPinjamBTs" EntityType="dbAISModel.DetailPinjamBT" />
     <EntitySet Name="DetailPinjamWarkahs" EntityType="dbAISModel.DetailPinjamWarkah" />
-    <EntitySet Name="Albums" EntityType="dbAISModel.Album" />
-    <EntitySet Name="BukuTanahs" EntityType="dbAISModel.BukuTanah" />
     <AssociationSet Name="FK_tmBukuTanah_tmAlbum" Association="dbAISModel.FK_tmBukuTanah_tmAlbum">
       <End Role="tmAlbum" EntitySet="Albums" />
       <End Role="tmBukuTanah" EntitySet="BukuTanahs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tmWarkah_tmAlbum" Association="dbAISModel.FK_tmWarkah_tmAlbum">
+      <End Role="tmAlbum" EntitySet="Albums" />
+      <End Role="tmWarkah" EntitySet="Warkahs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tmBukuTanah_tmDesa" Association="dbAISModel.FK_tmBukuTanah_tmDesa">
+      <End Role="tmDesa" EntitySet="Desas" />
+      <End Role="tmBukuTanah" EntitySet="BukuTanahs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tmBukuTanah_tmJenisHak" Association="dbAISModel.FK_tmBukuTanah_tmJenisHak">
+      <End Role="tmJenisHak" EntitySet="JenisHaks" />
+      <End Role="tmBukuTanah" EntitySet="BukuTanahs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tmBukuTanah_tmKecamatan" Association="dbAISModel.FK_tmBukuTanah_tmKecamatan">
+      <End Role="tmKecamatan" EntitySet="Kecamatans" />
+      <End Role="tmBukuTanah" EntitySet="BukuTanahs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_trDetailKembaliBT_tmBukuTanah" Association="dbAISModel.FK_trDetailKembaliBT_tmBukuTanah">
+      <End Role="tmBukuTanah" EntitySet="BukuTanahs" />
+      <End Role="trDetailKembaliBT" EntitySet="DetailKembaliBTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_trDetailPinjamBT_tmBukuTanah" Association="dbAISModel.FK_trDetailPinjamBT_tmBukuTanah">
+      <End Role="tmBukuTanah" EntitySet="BukuTanahs" />
+      <End Role="trDetailPinjamBT" EntitySet="DetailPinjamBTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tmDesa_tmKecamatan" Association="dbAISModel.FK_tmDesa_tmKecamatan">
+      <End Role="tmKecamatan" EntitySet="Kecamatans" />
+      <End Role="tmDesa" EntitySet="Desas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tmStaff_tmGender" Association="dbAISModel.FK_tmStaff_tmGender">
+      <End Role="tmGender" EntitySet="Genders" />
+      <End Role="tmStaff" EntitySet="Staffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tmStaff_tmJabatan" Association="dbAISModel.FK_tmStaff_tmJabatan">
+      <End Role="tmJabatan" EntitySet="Jabatans" />
+      <End Role="tmStaff" EntitySet="Staffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_trKembali_tmStaff" Association="dbAISModel.FK_trKembali_tmStaff">
+      <End Role="tmStaff" EntitySet="Staffs" />
+      <End Role="trKembali" EntitySet="Kembalis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_trPinjam_tmStaff" Association="dbAISModel.FK_trPinjam_tmStaff">
+      <End Role="tmStaff" EntitySet="Staffs" />
+      <End Role="trPinjam" EntitySet="Pinjams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_trDetailKembaliWarkah_tmWarkah" Association="dbAISModel.FK_trDetailKembaliWarkah_tmWarkah">
+      <End Role="tmWarkah" EntitySet="Warkahs" />
+      <End Role="trDetailKembaliWarkah" EntitySet="DetailKembaliWarkahs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_trDetailPinjamWarkah_tmWarkah" Association="dbAISModel.FK_trDetailPinjamWarkah_tmWarkah">
+      <End Role="tmWarkah" EntitySet="Warkahs" />
+      <End Role="trDetailPinjamWarkah" EntitySet="DetailPinjamWarkahs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_trDetailKembaliBT_trKembali" Association="dbAISModel.FK_trDetailKembaliBT_trKembali">
+      <End Role="trKembali" EntitySet="Kembalis" />
+      <End Role="trDetailKembaliBT" EntitySet="DetailKembaliBTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_trDetailKembaliWarkah_trKembali" Association="dbAISModel.FK_trDetailKembaliWarkah_trKembali">
+      <End Role="trKembali" EntitySet="Kembalis" />
+      <End Role="trDetailKembaliWarkah" EntitySet="DetailKembaliWarkahs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_trDetailPinjamBT_trPinjam" Association="dbAISModel.FK_trDetailPinjamBT_trPinjam">
+      <End Role="trPinjam" EntitySet="Pinjams" />
+      <End Role="trDetailPinjamBT" EntitySet="DetailPinjamBTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_trDetailPinjamWarkah_trPinjam" Association="dbAISModel.FK_trDetailPinjamWarkah_trPinjam">
+      <End Role="trPinjam" EntitySet="Pinjams" />
+      <End Role="trDetailPinjamWarkah" EntitySet="DetailPinjamWarkahs" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Album">
@@ -211,6 +103,7 @@
     <Property Name="Rak" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="Blok" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="BukuTanahs" Relationship="dbAISModel.FK_tmBukuTanah_tmAlbum" FromRole="tmAlbum" ToRole="tmBukuTanah" />
+    <NavigationProperty Name="Warkahs" Relationship="dbAISModel.FK_tmWarkah_tmAlbum" FromRole="tmAlbum" ToRole="tmWarkah" />
   </EntityType>
   <EntityType Name="BukuTanah">
     <Key>
@@ -227,6 +120,201 @@
     <Property Name="PemegangHak" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Status" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
     <NavigationProperty Name="Album" Relationship="dbAISModel.FK_tmBukuTanah_tmAlbum" FromRole="tmBukuTanah" ToRole="tmAlbum" />
+    <NavigationProperty Name="Desa" Relationship="dbAISModel.FK_tmBukuTanah_tmDesa" FromRole="tmBukuTanah" ToRole="tmDesa" />
+    <NavigationProperty Name="JenisHak" Relationship="dbAISModel.FK_tmBukuTanah_tmJenisHak" FromRole="tmBukuTanah" ToRole="tmJenisHak" />
+    <NavigationProperty Name="Kecamatan" Relationship="dbAISModel.FK_tmBukuTanah_tmKecamatan" FromRole="tmBukuTanah" ToRole="tmKecamatan" />
+    <NavigationProperty Name="DetailKembaliBTs" Relationship="dbAISModel.FK_trDetailKembaliBT_tmBukuTanah" FromRole="tmBukuTanah" ToRole="trDetailKembaliBT" />
+    <NavigationProperty Name="DetailPinjamBTs" Relationship="dbAISModel.FK_trDetailPinjamBT_tmBukuTanah" FromRole="tmBukuTanah" ToRole="trDetailPinjamBT" />
+  </EntityType>
+  <EntityType Name="ControlAccess">
+    <Key>
+      <PropertyRef Name="ControlAccessID" />
+    </Key>
+    <Property Name="ControlAccessID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlAccessName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Desa">
+    <Key>
+      <PropertyRef Name="IDDesa" />
+    </Key>
+    <Property Name="RecordStatus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="IDDesa" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="NamaDesa" Type="String" Nullable="false" MaxLength="125" FixedLength="false" Unicode="false" />
+    <Property Name="IDKecamatan" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BukuTanahs" Relationship="dbAISModel.FK_tmBukuTanah_tmDesa" FromRole="tmDesa" ToRole="tmBukuTanah" />
+    <NavigationProperty Name="Kecamatan" Relationship="dbAISModel.FK_tmDesa_tmKecamatan" FromRole="tmDesa" ToRole="tmKecamatan" />
+  </EntityType>
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="IDJekel" />
+    </Key>
+    <Property Name="RecordStatus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="IDJekel" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="NamaJekel" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Staffs" Relationship="dbAISModel.FK_tmStaff_tmGender" FromRole="tmGender" ToRole="tmStaff" />
+  </EntityType>
+  <EntityType Name="GroupAccess">
+    <Key>
+      <PropertyRef Name="GroupAccessID" />
+    </Key>
+    <Property Name="RecordStatus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="GroupAccessID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GroupAccessName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Jabatan">
+    <Key>
+      <PropertyRef Name="IDJabatan" />
+    </Key>
+    <Property Name="RecordStatus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="IDJabatan" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="NamaJabatan" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Staffs" Relationship="dbAISModel.FK_tmStaff_tmJabatan" FromRole="tmJabatan" ToRole="tmStaff" />
+  </EntityType>
+  <EntityType Name="JenisHak">
+    <Key>
+      <PropertyRef Name="IDHak" />
+    </Key>
+    <Property Name="RecordStatus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="IDHak" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="NamaHak" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BukuTanahs" Relationship="dbAISModel.FK_tmBukuTanah_tmJenisHak" FromRole="tmJenisHak" ToRole="tmBukuTanah" />
+  </EntityType>
+  <EntityType Name="Kecamatan">
+    <Key>
+      <PropertyRef Name="IDKecamatan" />
+    </Key>
+    <Property Name="RecordStatus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="IDKecamatan" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="NamaKecamatan" Type="String" Nullable="false" MaxLength="125" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BukuTanahs" Relationship="dbAISModel.FK_tmBukuTanah_tmKecamatan" FromRole="tmKecamatan" ToRole="tmBukuTanah" />
+    <NavigationProperty Name="Desas" Relationship="dbAISModel.FK_tmDesa_tmKecamatan" FromRole="tmKecamatan" ToRole="tmDesa" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="NIP" />
+    </Key>
+    <Property Name="RecordStatus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="NIP" Type="String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="NamaLengkap" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IDJabatan" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="IDJekel" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Alamat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Gender" Relationship="dbAISModel.FK_tmStaff_tmGender" FromRole="tmStaff" ToRole="tmGender" />
+    <NavigationProperty Name="Jabatan" Relationship="dbAISModel.FK_tmStaff_tmJabatan" FromRole="tmStaff" ToRole="tmJabatan" />
+    <NavigationProperty Name="Kembalis" Relationship="dbAISModel.FK_trKembali_tmStaff" FromRole="tmStaff" ToRole="trKembali" />
+    <NavigationProperty Name="Pinjams" Relationship="dbAISModel.FK_trPinjam_tmStaff" FromRole="tmStaff" ToRole="trPinjam" />
+  </EntityType>
+  <EntityType Name="Warkah">
+    <Key>
+      <PropertyRef Name="NW_Barcode" />
+    </Key>
+    <Property Name="RecordStatus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="NW_Barcode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Jenis" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NomorWarkah" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Tahun" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="No_Album" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Album" Relationship="dbAISModel.FK_tmWarkah_tmAlbum" FromRole="tmWarkah" ToRole="tmAlbum" />
+    <NavigationProperty Name="DetailKembaliWarkahs" Relationship="dbAISModel.FK_trDetailKembaliWarkah_tmWarkah" FromRole="tmWarkah" ToRole="trDetailKembaliWarkah" />
+    <NavigationProperty Name="DetailPinjamWarkahs" Relationship="dbAISModel.FK_trDetailPinjamWarkah_tmWarkah" FromRole="tmWarkah" ToRole="trDetailPinjamWarkah" />
+  </EntityType>
+  <EntityType Name="Kembali">
+    <Key>
+      <PropertyRef Name="NomorKbl" />
+    </Key>
+    <Property Name="NomorKbl" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalKbl" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TotalKbl" Type="Int32" Nullable="false" />
+    <Property Name="NIP" Type="String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="User_name" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Staff" Relationship="dbAISModel.FK_trKembali_tmStaff" FromRole="trKembali" ToRole="tmStaff" />
+    <NavigationProperty Name="DetailKembaliBTs" Relationship="dbAISModel.FK_trDetailKembaliBT_trKembali" FromRole="trKembali" ToRole="trDetailKembaliBT" />
+    <NavigationProperty Name="DetailKembaliWarkahs" Relationship="dbAISModel.FK_trDetailKembaliWarkah_trKembali" FromRole="trKembali" ToRole="trDetailKembaliWarkah" />
+  </EntityType>
+  <EntityType Name="Pinjam">
+    <Key>
+      <PropertyRef Name="Nomorpjm" />
+    </Key>
+    <Property Name="Nomorpjm" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Tanggalpjm" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Totalpjm" Type="Int32" Nullable="false" />
+    <Property Name="NIP" Type="String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="User_name" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Staff" Relationship="dbAISModel.FK_trPinjam_tmStaff" FromRole="trPinjam" ToRole="tmStaff" />
+    <NavigationProperty Name="DetailPinjamBTs" Relationship="dbAISModel.FK_trDetailPinjamBT_trPinjam" FromRole="trPinjam" ToRole="trDetailPinjamBT" />
+    <NavigationProperty Name="DetailPinjamWarkahs" Relationship="dbAISModel.FK_trDetailPinjamWarkah_trPinjam" FromRole="trPinjam" ToRole="trDetailPinjamWarkah" />
+  </EntityType>
+  <EntityType Name="GenVariable">
+    <Key>
+      <PropertyRef Name="Variable" />
+      <PropertyRef Name="ValueName" />
+    </Key>
+    <Property Name="Variable" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ValueName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Keterangan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ComSetting">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="CompanyName" />
+      <PropertyRef Name="CompanyAddress" />
+    </Key>
+    <Property Name="CompanyID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyAddress" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ApplicationVersion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TokenServiceID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DetailKembaliBT">
+    <Key>
+      <PropertyRef Name="Nomorkbl" />
+      <PropertyRef Name="NB_Barcode" />
+      <PropertyRef Name="JumlahBK" />
+    </Key>
+    <Property Name="Nomorkbl" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NB_Barcode" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="JumlahBK" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BukuTanah" Relationship="dbAISModel.FK_trDetailKembaliBT_tmBukuTanah" FromRole="trDetailKembaliBT" ToRole="tmBukuTanah" />
+    <NavigationProperty Name="Kembali" Relationship="dbAISModel.FK_trDetailKembaliBT_trKembali" FromRole="trDetailKembaliBT" ToRole="trKembali" />
+  </EntityType>
+  <EntityType Name="DetailKembaliWarkah">
+    <Key>
+      <PropertyRef Name="Nomorkbl" />
+      <PropertyRef Name="NW_Barcode" />
+      <PropertyRef Name="JumlahBK" />
+    </Key>
+    <Property Name="Nomorkbl" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NW_Barcode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="JumlahBK" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Warkah" Relationship="dbAISModel.FK_trDetailKembaliWarkah_tmWarkah" FromRole="trDetailKembaliWarkah" ToRole="tmWarkah" />
+    <NavigationProperty Name="Kembali" Relationship="dbAISModel.FK_trDetailKembaliWarkah_trKembali" FromRole="trDetailKembaliWarkah" ToRole="trKembali" />
+  </EntityType>
+  <EntityType Name="DetailPinjamBT">
+    <Key>
+      <PropertyRef Name="Nomorpjm" />
+      <PropertyRef Name="NB_Barcode" />
+      <PropertyRef Name="JumlahBK" />
+    </Key>
+    <Property Name="Nomorpjm" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NB_Barcode" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="JumlahBK" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BukuTanah" Relationship="dbAISModel.FK_trDetailPinjamBT_tmBukuTanah" FromRole="trDetailPinjamBT" ToRole="tmBukuTanah" />
+    <NavigationProperty Name="Pinjam" Relationship="dbAISModel.FK_trDetailPinjamBT_trPinjam" FromRole="trDetailPinjamBT" ToRole="trPinjam" />
+  </EntityType>
+  <EntityType Name="DetailPinjamWarkah">
+    <Key>
+      <PropertyRef Name="Nomorpjm" />
+      <PropertyRef Name="NW_Barcode" />
+      <PropertyRef Name="JumlahBK" />
+    </Key>
+    <Property Name="Nomorpjm" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NW_Barcode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="JumlahBK" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Warkah" Relationship="dbAISModel.FK_trDetailPinjamWarkah_tmWarkah" FromRole="trDetailPinjamWarkah" ToRole="tmWarkah" />
+    <NavigationProperty Name="Pinjam" Relationship="dbAISModel.FK_trDetailPinjamWarkah_trPinjam" FromRole="trDetailPinjamWarkah" ToRole="trPinjam" />
   </EntityType>
   <Association Name="FK_tmBukuTanah_tmAlbum">
     <End Type="dbAISModel.Album" Role="tmAlbum" Multiplicity="1" />
@@ -237,6 +325,210 @@
       </Principal>
       <Dependent Role="tmBukuTanah">
         <PropertyRef Name="No_Album" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tmWarkah_tmAlbum">
+    <End Type="dbAISModel.Album" Role="tmAlbum" Multiplicity="1" />
+    <End Type="dbAISModel.Warkah" Role="tmWarkah" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tmAlbum">
+        <PropertyRef Name="No_Album" />
+      </Principal>
+      <Dependent Role="tmWarkah">
+        <PropertyRef Name="No_Album" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tmBukuTanah_tmDesa">
+    <End Type="dbAISModel.Desa" Role="tmDesa" Multiplicity="1" />
+    <End Type="dbAISModel.BukuTanah" Role="tmBukuTanah" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tmDesa">
+        <PropertyRef Name="IDDesa" />
+      </Principal>
+      <Dependent Role="tmBukuTanah">
+        <PropertyRef Name="IDDesa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tmBukuTanah_tmJenisHak">
+    <End Type="dbAISModel.JenisHak" Role="tmJenisHak" Multiplicity="1" />
+    <End Type="dbAISModel.BukuTanah" Role="tmBukuTanah" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tmJenisHak">
+        <PropertyRef Name="IDHak" />
+      </Principal>
+      <Dependent Role="tmBukuTanah">
+        <PropertyRef Name="IDHak" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tmBukuTanah_tmKecamatan">
+    <End Type="dbAISModel.Kecamatan" Role="tmKecamatan" Multiplicity="1" />
+    <End Type="dbAISModel.BukuTanah" Role="tmBukuTanah" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tmKecamatan">
+        <PropertyRef Name="IDKecamatan" />
+      </Principal>
+      <Dependent Role="tmBukuTanah">
+        <PropertyRef Name="IDKecamatan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_trDetailKembaliBT_tmBukuTanah">
+    <End Type="dbAISModel.BukuTanah" Role="tmBukuTanah" Multiplicity="1" />
+    <End Type="dbAISModel.DetailKembaliBT" Role="trDetailKembaliBT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tmBukuTanah">
+        <PropertyRef Name="NB_Barcode" />
+      </Principal>
+      <Dependent Role="trDetailKembaliBT">
+        <PropertyRef Name="NB_Barcode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_trDetailPinjamBT_tmBukuTanah">
+    <End Type="dbAISModel.BukuTanah" Role="tmBukuTanah" Multiplicity="1" />
+    <End Type="dbAISModel.DetailPinjamBT" Role="trDetailPinjamBT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tmBukuTanah">
+        <PropertyRef Name="NB_Barcode" />
+      </Principal>
+      <Dependent Role="trDetailPinjamBT">
+        <PropertyRef Name="NB_Barcode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tmDesa_tmKecamatan">
+    <End Type="dbAISModel.Kecamatan" Role="tmKecamatan" Multiplicity="1" />
+    <End Type="dbAISModel.Desa" Role="tmDesa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tmKecamatan">
+        <PropertyRef Name="IDKecamatan" />
+      </Principal>
+      <Dependent Role="tmDesa">
+        <PropertyRef Name="IDKecamatan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tmStaff_tmGender">
+    <End Type="dbAISModel.Gender" Role="tmGender" Multiplicity="1" />
+    <End Type="dbAISModel.Staff" Role="tmStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tmGender">
+        <PropertyRef Name="IDJekel" />
+      </Principal>
+      <Dependent Role="tmStaff">
+        <PropertyRef Name="IDJekel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tmStaff_tmJabatan">
+    <End Type="dbAISModel.Jabatan" Role="tmJabatan" Multiplicity="1" />
+    <End Type="dbAISModel.Staff" Role="tmStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tmJabatan">
+        <PropertyRef Name="IDJabatan" />
+      </Principal>
+      <Dependent Role="tmStaff">
+        <PropertyRef Name="IDJabatan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_trKembali_tmStaff">
+    <End Type="dbAISModel.Staff" Role="tmStaff" Multiplicity="1" />
+    <End Type="dbAISModel.Kembali" Role="trKembali" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tmStaff">
+        <PropertyRef Name="NIP" />
+      </Principal>
+      <Dependent Role="trKembali">
+        <PropertyRef Name="NIP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_trPinjam_tmStaff">
+    <End Type="dbAISModel.Staff" Role="tmStaff" Multiplicity="1" />
+    <End Type="dbAISModel.Pinjam" Role="trPinjam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tmStaff">
+        <PropertyRef Name="NIP" />
+      </Principal>
+      <Dependent Role="trPinjam">
+        <PropertyRef Name="NIP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_trDetailKembaliWarkah_tmWarkah">
+    <End Type="dbAISModel.Warkah" Role="tmWarkah" Multiplicity="1" />
+    <End Type="dbAISModel.DetailKembaliWarkah" Role="trDetailKembaliWarkah" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tmWarkah">
+        <PropertyRef Name="NW_Barcode" />
+      </Principal>
+      <Dependent Role="trDetailKembaliWarkah">
+        <PropertyRef Name="NW_Barcode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_trDetailPinjamWarkah_tmWarkah">
+    <End Type="dbAISModel.Warkah" Role="tmWarkah" Multiplicity="1" />
+    <End Type="dbAISModel.DetailPinjamWarkah" Role="trDetailPinjamWarkah" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tmWarkah">
+        <PropertyRef Name="NW_Barcode" />
+      </Principal>
+      <Dependent Role="trDetailPinjamWarkah">
+        <PropertyRef Name="NW_Barcode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_trDetailKembaliBT_trKembali">
+    <End Type="dbAISModel.Kembali" Role="trKembali" Multiplicity="1" />
+    <End Type="dbAISModel.DetailKembaliBT" Role="trDetailKembaliBT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="trKembali">
+        <PropertyRef Name="NomorKbl" />
+      </Principal>
+      <Dependent Role="trDetailKembaliBT">
+        <PropertyRef Name="Nomorkbl" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_trDetailKembaliWarkah_trKembali">
+    <End Type="dbAISModel.Kembali" Role="trKembali" Multiplicity="1" />
+    <End Type="dbAISModel.DetailKembaliWarkah" Role="trDetailKembaliWarkah" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="trKembali">
+        <PropertyRef Name="NomorKbl" />
+      </Principal>
+      <Dependent Role="trDetailKembaliWarkah">
+        <PropertyRef Name="Nomorkbl" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_trDetailPinjamBT_trPinjam">
+    <End Type="dbAISModel.Pinjam" Role="trPinjam" Multiplicity="1" />
+    <End Type="dbAISModel.DetailPinjamBT" Role="trDetailPinjamBT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="trPinjam">
+        <PropertyRef Name="Nomorpjm" />
+      </Principal>
+      <Dependent Role="trDetailPinjamBT">
+        <PropertyRef Name="Nomorpjm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_trDetailPinjamWarkah_trPinjam">
+    <End Type="dbAISModel.Pinjam" Role="trPinjam" Multiplicity="1" />
+    <End Type="dbAISModel.DetailPinjamWarkah" Role="trDetailPinjamWarkah" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="trPinjam">
+        <PropertyRef Name="Nomorpjm" />
+      </Principal>
+      <Dependent Role="trDetailPinjamWarkah">
+        <PropertyRef Name="Nomorpjm" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

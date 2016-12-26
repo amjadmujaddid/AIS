@@ -4,28 +4,44 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a5d7e33390d44a95a9f6a4c7f87a2cf6" Name="Diagram1">
-        <EntityTypeShape EntityType="dbAISModel.ControlAccess" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.Desa" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.Gender" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.GroupAccess" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.Jabatan" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.JenisHak" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.Kecamatan" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.Staff" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.User" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.Warkah" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.Kembali" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.Pinjam" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.GenVariable" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.ComSetting" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.DetailKembaliBT" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.DetailKembaliWarkah" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.DetailPinjamBT" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.DetailPinjamWarkah" Width="1.5" PointX="6.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbAISModel.Album" Width="1.5" PointX="9" PointY="10.875" />
-        <EntityTypeShape EntityType="dbAISModel.BukuTanah" Width="1.5" PointX="11.625" PointY="10.875" />
+      <Diagram DiagramId="a5d7e33390d44a95a9f6a4c7f87a2cf6" Name="Diagram1" ZoomLevel="94">
+        <EntityTypeShape EntityType="dbAISModel.Album" Width="1.5" PointX="3" PointY="2.625" />
+        <EntityTypeShape EntityType="dbAISModel.BukuTanah" Width="1.5" PointX="5.25" PointY="5.125" />
+        <EntityTypeShape EntityType="dbAISModel.ControlAccess" Width="1.5" PointX="9.75" PointY="2.875" />
+        <EntityTypeShape EntityType="dbAISModel.Desa" Width="1.5" PointX="3" PointY="6" />
+        <EntityTypeShape EntityType="dbAISModel.Gender" Width="1.5" PointX="0.75" PointY="15.125" />
+        <EntityTypeShape EntityType="dbAISModel.GroupAccess" Width="1.5" PointX="9.75" PointY="5.875" />
+        <EntityTypeShape EntityType="dbAISModel.Jabatan" Width="1.5" PointX="0.75" PointY="12.625" />
+        <EntityTypeShape EntityType="dbAISModel.JenisHak" Width="1.5" PointX="3" PointY="9.75" />
+        <EntityTypeShape EntityType="dbAISModel.Kecamatan" Width="1.5" PointX="0.75" PointY="6.125" />
+        <EntityTypeShape EntityType="dbAISModel.Staff" Width="1.5" PointX="3" PointY="13.375" />
+        <EntityTypeShape EntityType="dbAISModel.Warkah" Width="1.5" PointX="5.25" PointY="17.5" />
+        <EntityTypeShape EntityType="dbAISModel.Kembali" Width="1.5" PointX="5.25" PointY="13.375" />
+        <EntityTypeShape EntityType="dbAISModel.Pinjam" Width="1.5" PointX="5.25" PointY="0.75" />
+        <EntityTypeShape EntityType="dbAISModel.GenVariable" Width="1.5" PointX="9.75" PointY="8.875" />
+        <EntityTypeShape EntityType="dbAISModel.ComSetting" Width="1.5" PointX="9.75" PointY="11.875" />
+        <EntityTypeShape EntityType="dbAISModel.DetailKembaliBT" Width="1.5" PointX="7.5" PointY="3.125" />
+        <EntityTypeShape EntityType="dbAISModel.DetailKembaliWarkah" Width="1.5" PointX="7.5" PointY="16" />
+        <EntityTypeShape EntityType="dbAISModel.DetailPinjamBT" Width="1.5" PointX="7.5" PointY="6.125" />
+        <EntityTypeShape EntityType="dbAISModel.DetailPinjamWarkah" Width="1.5" PointX="7.5" PointY="9.625" />
         <AssociationConnector Association="dbAISModel.FK_tmBukuTanah_tmAlbum" />
+        <AssociationConnector Association="dbAISModel.FK_tmWarkah_tmAlbum" />
+        <AssociationConnector Association="dbAISModel.FK_tmBukuTanah_tmDesa" />
+        <AssociationConnector Association="dbAISModel.FK_tmBukuTanah_tmJenisHak" />
+        <AssociationConnector Association="dbAISModel.FK_tmBukuTanah_tmKecamatan" />
+        <AssociationConnector Association="dbAISModel.FK_trDetailKembaliBT_tmBukuTanah" />
+        <AssociationConnector Association="dbAISModel.FK_trDetailPinjamBT_tmBukuTanah" />
+        <AssociationConnector Association="dbAISModel.FK_tmDesa_tmKecamatan" />
+        <AssociationConnector Association="dbAISModel.FK_tmStaff_tmGender" />
+        <AssociationConnector Association="dbAISModel.FK_tmStaff_tmJabatan" />
+        <AssociationConnector Association="dbAISModel.FK_trKembali_tmStaff" />
+        <AssociationConnector Association="dbAISModel.FK_trPinjam_tmStaff" />
+        <AssociationConnector Association="dbAISModel.FK_trDetailKembaliWarkah_tmWarkah" />
+        <AssociationConnector Association="dbAISModel.FK_trDetailPinjamWarkah_tmWarkah" />
+        <AssociationConnector Association="dbAISModel.FK_trDetailKembaliBT_trKembali" />
+        <AssociationConnector Association="dbAISModel.FK_trDetailKembaliWarkah_trKembali" />
+        <AssociationConnector Association="dbAISModel.FK_trDetailPinjamBT_trPinjam" />
+        <AssociationConnector Association="dbAISModel.FK_trDetailPinjamWarkah_trPinjam" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
