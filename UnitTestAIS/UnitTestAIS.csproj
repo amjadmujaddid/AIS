@@ -71,6 +71,7 @@
     <Compile Include="Master\JenisHakUT.cs" />
     <Compile Include="Master\KecamatanUT.cs" />
     <Compile Include="Master\StaffUT.cs" />
+    <Compile Include="Master\WarkahUT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
