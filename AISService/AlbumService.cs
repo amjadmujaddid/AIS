@@ -52,7 +52,7 @@ namespace AISService
             {
                 using (TransactionScope transScope = new TransactionScope(TransactionScopeOption.Required, new TransactionOptions { IsolationLevel = IsolationLevel.ReadCommitted }))
                 {
-                    _albumRepo.GetDataById(request.No_Album);
+                    response.Album = _albumRepo.GetDataById(request.No_Album);
                     transScope.Complete();
                 }
             }

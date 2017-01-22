@@ -73,9 +73,11 @@
     <Compile Include="DAL\Interface\IJabatanRepository.cs" />
     <Compile Include="DAL\Interface\IJenisHakRepository.cs" />
     <Compile Include="DAL\Interface\IKecamatanRepository.cs" />
+    <Compile Include="DAL\Interface\IStaffRepository.cs" />
     <Compile Include="DAL\JabatanRepository.cs" />
     <Compile Include="DAL\JenisHakRepository.cs" />
     <Compile Include="DAL\KecamatanRepository.cs" />
+    <Compile Include="DAL\StaffRepository.cs" />
     <Compile Include="Model\Album.cs" />
     <Compile Include="Model\BukuTanah.cs" />
     <Compile Include="Model\ComSetting.cs" />

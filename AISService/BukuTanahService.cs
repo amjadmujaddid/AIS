@@ -53,7 +53,7 @@ namespace AISService
             {
                 using (TransactionScope transScope = new TransactionScope(TransactionScopeOption.Required, new TransactionOptions { IsolationLevel = IsolationLevel.ReadCommitted }))
                 {
-                    _bukuTanahRepo.GetDataById(request.NB_Barcode);
+                    response.BukuTanah = _bukuTanahRepo.GetDataById(request.NB_Barcode);
                     transScope.Complete();
                 }
             }

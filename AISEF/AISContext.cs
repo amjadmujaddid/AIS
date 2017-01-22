@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HyRestoEF
+namespace AISEF
 {
     public class AISContext<T> : DbContext where T : class
     {
