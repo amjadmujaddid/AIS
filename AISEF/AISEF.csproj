@@ -70,8 +70,10 @@
     <Compile Include="DAL\Interface\IDesaRepository.cs" />
     <Compile Include="DAL\Interface\IGenderRepository.cs" />
     <Compile Include="DAL\Interface\IGenVariableRepository.cs" />
+    <Compile Include="DAL\Interface\IJabatanRepository.cs" />
     <Compile Include="DAL\Interface\IJenisHakRepository.cs" />
     <Compile Include="DAL\Interface\IKecamatanRepository.cs" />
+    <Compile Include="DAL\JabatanRepository.cs" />
     <Compile Include="DAL\JenisHakRepository.cs" />
     <Compile Include="DAL\KecamatanRepository.cs" />
     <Compile Include="Model\Album.cs" />

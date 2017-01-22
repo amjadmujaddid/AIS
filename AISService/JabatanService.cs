@@ -11,48 +11,33 @@ using System.Transactions;
 
 namespace AISService
 {
-    public class DesaService : IDesaService
+    public class JabatanService : IJabatanService
     {
         #region Class Attribute
 
-        IDesaRepository _desaRepo;
+        IJabatanRepository _jabatanRepo;
 
         #endregion
 
         #region Constructor
 
-        public DesaService()
+        public JabatanService()
         {
-            _desaRepo = new DesaRepository();
+            _jabatanRepo = new JabatanRepository();
         }
 
         #endregion
 
-        #region IDesaService Implementation
+        #region IJabatanService Implementation
 
-        public GetAllDataDesaResponse GetAllDataDesa()
+        public GetDataJabatanByIdResponse GetDataJabatanById(GetDataJabatanByIdRequest request)
         {
-            GetAllDataDesaResponse response = new GetAllDataDesaResponse();
-            try
-            {
-                List<Desa> _listDesa = _desaRepo.GetAll();
-                response.DesaList.AddRange(_listDesa);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.ToString());
-            }
-            return response;
-        }
-
-        public GetDataDesaByIdResponse GetDataDesaById(GetDataDesaByIdRequest request)
-        {
-            GetDataDesaByIdResponse response = new GetDataDesaByIdResponse();
+            GetDataJabatanByIdResponse response = new GetDataJabatanByIdResponse();
             try
             {
                 using (TransactionScope transScope = new TransactionScope(TransactionScopeOption.Required, new TransactionOptions { IsolationLevel = IsolationLevel.ReadCommitted }))
                 {
-                    response.Desa = _desaRepo.GetDataById(request.idDesa);
+                    response.Jabatan = _jabatanRepo.GetDataById(request.IDJabatan);
                     transScope.Complete();
                 }
             }
@@ -64,14 +49,14 @@ namespace AISService
             return response;
         }
 
-        public InsertDataDesaResponse InsertDataDesa(InsertDataDesaRequest request)
+        public InsertDataJabatanResponse InsertDataJabatan(InsertDataJabatanRequest request)
         {
-            InsertDataDesaResponse response = new InsertDataDesaResponse();
+            InsertDataJabatanResponse response = new InsertDataJabatanResponse();
             try
             {
                 using (TransactionScope transScope = new TransactionScope(TransactionScopeOption.Required, new TransactionOptions { IsolationLevel = IsolationLevel.ReadCommitted }))
                 {
-                    _desaRepo.Add(request.Desa);
+                    _jabatanRepo.Add(request.Jabatan);
                     transScope.Complete();
                 }
             }
@@ -83,14 +68,29 @@ namespace AISService
             return response;
         }
 
-        public UpdateDataDesaResponse UpdateDataDesa(UpdateDataDesaRequest request)
+        public GetAllDataJabatanResponse GetAllDataJabatan()
         {
-            UpdateDataDesaResponse response = new UpdateDataDesaResponse();
+            GetAllDataJabatanResponse response = new GetAllDataJabatanResponse();
+            try
+            {
+                List<Jabatan> _listJabatan = _jabatanRepo.GetAll();
+                response.JabatanList.AddRange(_listJabatan);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+            return response;
+        }
+
+        public UpdateDataJabatanResponse UpdateDataJabatan(UpdateDataJabatanRequest request)
+        {
+            UpdateDataJabatanResponse response = new UpdateDataJabatanResponse();
             try
             {
                 using (TransactionScope transScope = new TransactionScope(TransactionScopeOption.Required, new TransactionOptions { IsolationLevel = IsolationLevel.ReadCommitted }))
                 {
-                    _desaRepo.Update(request.Desa);
+                    _jabatanRepo.Update(request.Jabatan);
                     transScope.Complete();
                 }
             }
@@ -100,9 +100,7 @@ namespace AISService
             }
             return response;
         }
-
 
         #endregion
-
     }
 }
