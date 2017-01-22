@@ -68,6 +68,8 @@
     <Compile Include="DAL\Interface\IDALRepository.cs" />
     <Compile Include="DAL\Interface\IDesaRepository.cs" />
     <Compile Include="DAL\Interface\IGenVariableRepository.cs" />
+    <Compile Include="DAL\Interface\IKecamatanRepository.cs" />
+    <Compile Include="DAL\KecamatanRepository.cs" />
     <Compile Include="Model\Album.cs" />
     <Compile Include="Model\BukuTanah.cs" />
     <Compile Include="Model\ComSetting.cs" />

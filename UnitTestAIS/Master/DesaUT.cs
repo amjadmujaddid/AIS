@@ -70,14 +70,15 @@ namespace UnitTestAIS.Master
             GetDataDesaByIdResponse response = _desaService.GetDataDesaById(request);
 
             Assert.IsTrue(response.Messages.Count == 0, "Failed get data by Id");
+
         }
 
         [TestMethod]
-        public void GetAllDataDesa()
+        public void GetAllDataDesaTest()
         {
             GetAllDataDesaResponse response = _desaService.GetAllDataDesa();
 
-            Assert.IsTrue(response.Messages.Count == 0, "Failed insert data");
+            Assert.IsTrue(response.Messages.Count == 0, "Failed get all data");
         }
 
         #endregion
