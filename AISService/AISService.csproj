@@ -59,11 +59,13 @@
     <Compile Include="Contract\IDesaService.cs" />
     <Compile Include="Contract\IGenderService.cs" />
     <Compile Include="Contract\IGenVariableService.cs" />
+    <Compile Include="Contract\IJenisHakService.cs" />
     <Compile Include="Contract\IKecamatanService.cs" />
     <Compile Include="Contract\ResponseBase.cs" />
     <Compile Include="DesaService.cs" />
     <Compile Include="GenderService.cs" />
     <Compile Include="GenVariableService.cs" />
+    <Compile Include="JenisHakService.cs" />
     <Compile Include="KecamatanService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

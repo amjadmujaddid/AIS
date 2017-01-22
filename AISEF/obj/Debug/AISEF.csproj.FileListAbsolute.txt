@@ -37,3 +37,4 @@ E:\HyBrings\HyBrings Source Code\AIS\AISEF\bin\Debug\EntityFramework.xml
 E:\HyBrings\HyBrings Source Code\AIS\AISEF\bin\Debug\EntityFramework.SqlServer.xml
 E:\HyBrings\HyBrings Source Code\AIS\AISEF\obj\Debug\AISEF.dll
 E:\HyBrings\HyBrings Source Code\AIS\AISEF\obj\Debug\AISEF.pdb
+E:\HyBrings\HyBrings Source Code\AIS\AISEF\obj\Debug\AISEF.csprojResolveAssemblyReference.cache
