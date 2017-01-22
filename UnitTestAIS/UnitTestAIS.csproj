@@ -65,6 +65,7 @@
     <Compile Include="Master\BukuTanahUT.cs" />
     <Compile Include="Master\ComSettingUT.cs" />
     <Compile Include="Master\DesaUT.cs" />
+    <Compile Include="Master\GenderUT.cs" />
     <Compile Include="Master\GenVariableUT.cs" />
     <Compile Include="Master\KecamatanUT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

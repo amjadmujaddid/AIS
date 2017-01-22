@@ -31,7 +31,6 @@ H:\Project\AIS\AISService\bin\Debug\EntityFramework.SqlServer.xml
 H:\Project\AIS\AISService\obj\Debug\AISService.csprojResolveAssemblyReference.cache
 H:\Project\AIS\AISService\obj\Debug\AISService.dll
 H:\Project\AIS\AISService\obj\Debug\AISService.pdb
-E:\HyBrings\HyBrings Source Code\AIS\AISService\obj\Debug\AISService.csprojResolveAssemblyReference.cache
 E:\HyBrings\HyBrings Source Code\AIS\AISService\bin\Debug\AISService.dll
 E:\HyBrings\HyBrings Source Code\AIS\AISService\bin\Debug\AISService.pdb
 E:\HyBrings\HyBrings Source Code\AIS\AISService\bin\Debug\AISEF.dll
@@ -40,5 +39,6 @@ E:\HyBrings\HyBrings Source Code\AIS\AISService\bin\Debug\EntityFramework.SqlSer
 E:\HyBrings\HyBrings Source Code\AIS\AISService\bin\Debug\AISEF.pdb
 E:\HyBrings\HyBrings Source Code\AIS\AISService\bin\Debug\EntityFramework.xml
 E:\HyBrings\HyBrings Source Code\AIS\AISService\bin\Debug\EntityFramework.SqlServer.xml
+E:\HyBrings\HyBrings Source Code\AIS\AISService\obj\Debug\AISService.csprojResolveAssemblyReference.cache
 E:\HyBrings\HyBrings Source Code\AIS\AISService\obj\Debug\AISService.dll
 E:\HyBrings\HyBrings Source Code\AIS\AISService\obj\Debug\AISService.pdb
